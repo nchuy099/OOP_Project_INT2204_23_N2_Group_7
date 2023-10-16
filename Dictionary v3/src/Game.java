@@ -1,6 +1,2 @@
-public class Game {
-  public static class Guess_Word_Game {
-
-  }
-
+package PACKAGE_NAME;public class Game {
 }

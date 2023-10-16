@@ -6,6 +6,8 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
+import java.sql.SQLException;
+
 public class Main extends Application {
 
     @Override
@@ -19,7 +21,8 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        DictionaryManagement.readData();
         launch(args);
     }
 }
