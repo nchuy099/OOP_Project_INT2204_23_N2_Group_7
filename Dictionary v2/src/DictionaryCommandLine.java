@@ -4,7 +4,7 @@ public class DictionaryCommandLine {
   public static void showAllWords() {
     System.out.printf("%-4s | %-7s | %s\n", "NO", "English", "Vietnamese");
     int cnt = 1;
-    for (String word_expression: Dictionary.getWordList().keySet()) {
+    for (String word_expression : Dictionary.getWordList().keySet()) {
       System.out.printf("%-4d | %-7s | %s\n",
           cnt, word_expression, Dictionary.getWordList().get(word_expression).getMeaning());
       cnt++;
@@ -22,7 +22,7 @@ public class DictionaryCommandLine {
     Scanner sc = new Scanner(System.in);
     String typed = sc.nextLine();
     int typedLength = typed.length();
-    for (Word word: Dictionary.getWordList().values()) {
+    for (Word word : Dictionary.getWordList().values()) {
       if (word.getExpression().substring(0, typedLength).equals(typed)) {
         System.out.println(word.getExpression());
       }

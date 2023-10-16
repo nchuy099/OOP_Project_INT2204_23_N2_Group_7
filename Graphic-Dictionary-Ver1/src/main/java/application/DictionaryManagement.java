@@ -13,12 +13,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.plaf.nimbus.State;
+
 public class DictionaryManagement {
 
     public static Connection connection() throws SQLException {
         Connection connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3307/mydictionary",
-                "root", "Kien@7124" // change "password" to your database password
+                "root", "password" // change "password" to your database password
         );
         return connection;
     }
@@ -33,6 +34,7 @@ public class DictionaryManagement {
             Dictionary.addWord(word_expression, word_meaning);
         }
     }
+
     public static String lookUpWord(String wordExpression) {
         if (Dictionary.getWordList().containsKey(wordExpression)) {
             Word temp = Dictionary.getWordList().get(wordExpression);
