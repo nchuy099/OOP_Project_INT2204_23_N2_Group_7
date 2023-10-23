@@ -9,8 +9,8 @@ import javax.swing.plaf.nimbus.State;
 public class DictionaryDBConnection {
   public static Connection connection() throws SQLException {
     Connection connection = DriverManager.getConnection(
-        "jdbc:mysql://127.0.0.1:3307/mydictionary",
-        "root", "password" //change "password" to your database password
+        "jdbc:mysql://localhost:3307/mydictionary",
+        "root", "password" // change "password" to your database password
     );
     return connection;
   }
@@ -27,30 +27,29 @@ public class DictionaryDBConnection {
   }
 
   /*
-  public static void insertData(String word_expression,
-      String word_meaning) throws SQLException {
-    Connection con = connection();
-    PreparedStatement prepared = con.prepareStatement(
-        "INSERT INTO tbl_edict (word, detail) VALUES "
-            + "('?', '<C><F><I><N><Q>@? /''?/<br />*  ?<br />- ?</Q></N></I></F></C>')");
-    prepared.setString(1, word_expression);
-    prepared.setString(2, word_meaning);
-    prepared.setString(3, word_expression);
-    prepared.execute();
-  }
-
-  public static void updateData(String word_expression,
-              String word_meaning) throws SQLException {
-    Connection con = connection();
-    PreparedStatement prepared = con.prepareStatement(
-        "UPDATE tbl_edict SET word = ?, detail = <C><F><I><N><Q>@? "
-            + "/''?/<br />*  ?<br />- ?</Q></N></I></F></C> WHERE word = ?");
-    prepared.setString(1, word_expression);
-    prepared.setString(2, word_meaning);
-    prepared.setString(3, word_expression);
-    prepared.execute();
-  }
-  */
-
+   * public static void insertData(String word_expression,
+   * String word_meaning) throws SQLException {
+   * Connection con = connection();
+   * PreparedStatement prepared = con.prepareStatement(
+   * "INSERT INTO tbl_edict (word, detail) VALUES "
+   * + "('?', '<C><F><I><N><Q>@? /''?/<br />*  ?<br />- ?</Q></N></I></F></C>')");
+   * prepared.setString(1, word_expression);
+   * prepared.setString(2, word_meaning);
+   * prepared.setString(3, word_expression);
+   * prepared.execute();
+   * }
+   * 
+   * public static void updateData(String word_expression,
+   * String word_meaning) throws SQLException {
+   * Connection con = connection();
+   * PreparedStatement prepared = con.prepareStatement(
+   * "UPDATE tbl_edict SET word = ?, detail = <C><F><I><N><Q>@? "
+   * + "/''?/<br />*  ?<br />- ?</Q></N></I></F></C> WHERE word = ?");
+   * prepared.setString(1, word_expression);
+   * prepared.setString(2, word_meaning);
+   * prepared.setString(3, word_expression);
+   * prepared.execute();
+   * }
+   */
 
 }

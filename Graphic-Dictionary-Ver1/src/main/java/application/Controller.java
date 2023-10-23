@@ -57,9 +57,18 @@ public class Controller {
 
         Controller controller = loader.getController();
 
-        controller.wordTarget.setText(expression);
-        controller.wordType.setText("Comming soon");
-        controller.wordExplain.setText("Comming soon");
+        String searchResult = DictionaryManagement.lookUpWord(expression);
+
+        if (searchResult.equals("null")) {
+            controller.wordTarget.setText("404 ERROR");
+            controller.wordType.setText("");
+            controller.wordExplain.setText("Word Not Found! =((");
+        }else {
+            String[] parts = searchResult.split("\t");
+            controller.wordTarget.setText(parts[0]);
+            controller.wordType.setText("Comming soon");
+            controller.wordExplain.setText(parts[1]);
+        }
 
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);

@@ -1,3 +1,4 @@
+
 public class Word {
   private String expression;
   private String meaning;
