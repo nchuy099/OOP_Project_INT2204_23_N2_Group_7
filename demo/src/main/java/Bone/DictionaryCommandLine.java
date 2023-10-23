@@ -6,7 +6,7 @@ import java.util.Dictionary;
 
 public class DictionaryCommandLine {
   private static DictionaryManagement systemDictionaryManagement = new DictionaryManagement();
-  private static final Scanner input = new Scanner(System.in);
+  private static Scanner input = new Scanner(System.in);
 
   public static void insertFromCommandline() {
     input.reset();
@@ -22,20 +22,6 @@ public class DictionaryCommandLine {
       newWord.setMeaning(input.nextLine());
       systemDictionaryManagement.addWord(newWord);
     }
-  }
-
-  public static void showMenu() {
-    System.out.println("[0] Exit");
-    System.out.println("[1] Add");
-    System.out.println("[2] Remove");
-    System.out.println("[3] Update");
-    System.out.println("[4] Display");
-    System.out.println("[5] Lookup");
-    System.out.println("[6] Search");
-    System.out.println("[7] Game");
-    System.out.println("[8] Import from file");
-    System.out.println("[9] Export to file");
-    System.out.printf("%s", "Your action: ");
   }
 
   public static void removeWord() {
@@ -110,6 +96,20 @@ public class DictionaryCommandLine {
   public static void initSystemDictionaryManagement() throws SQLException, ClassNotFoundException {
     systemDictionaryManagement = new DictionaryManagement();
     systemDictionaryManagement.importFromDatabase("dictionary.db");
+  }
+
+  public static void showMenu() {
+    System.out.println("[0] Exit");
+    System.out.println("[1] Add");
+    System.out.println("[2] Remove");
+    System.out.println("[3] Update");
+    System.out.println("[4] Display");
+    System.out.println("[5] Lookup");
+    System.out.println("[6] Search");
+    System.out.println("[7] Game");
+    System.out.println("[8] Import from file");
+    System.out.println("[9] Export to file");
+    System.out.printf("%s", "Your action: ");
   }
 
   public static void dictionaryAdvanced() {
