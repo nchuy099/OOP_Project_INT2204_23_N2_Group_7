@@ -2,11 +2,14 @@ package meat.demo;
 
 import Bone.Dictionary;
 import Bone.DictionaryManagement;
+import Bone.VoiceRSS;
+import Bone.Word;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.web.HTMLEditor;
@@ -37,19 +40,20 @@ public class GeneralSearchController extends MainMenuController implements Initi
     protected Button speaker1;
     @FXML
     protected Button speaker2;
-
+    @FXML
+    protected Label wordLabel;
     protected DictionaryManagement wordDataManagement;
     protected Dictionary wordData;
 
     protected DictionaryManagement dictionaryManagement() throws SQLException, ClassNotFoundException {
         DictionaryManagement newManagement = new DictionaryManagement();
-        newManagement.importFromDatabase("dictionary.db");
+        newManagement.importFromDatabase("src/main/resources/media/database/dictionary.db");
         return newManagement;
     }
 
     protected DictionaryManagement bookmarkManagement() throws SQLException, ClassNotFoundException {
         DictionaryManagement newManagement = new DictionaryManagement();
-        newManagement.insertFromFile("bookmark.txt");
+        newManagement.insertFromFile("src/main/resources/media/text/bookmark.txt");
         return newManagement;
     }
 
@@ -101,12 +105,23 @@ public class GeneralSearchController extends MainMenuController implements Initi
     public void showWordInfoView() {
         String input = searchField.getText();
         if (wordData.getWordList().containsKey(input)) {
-            String wordInfo = wordData.getWordList().get(input).getWordInfo();
+            Word word = wordData.getWordList().get(input);
+            wordLabel.setText(word.getExpression());
+            String wordInfo = word.getWordInfo();
             wordInfoView.getEngine().loadContent(htmlEdit(wordInfo), "text/html");
         } else {
             wordInfoView.getEngine().loadContent("Word not found!");
         }
     }
+
+    public void spellingSpeaker1() throws Exception {
+        VoiceRSS.speakWord(wordLabel.getText(), VoiceRSS.englishUK);
+    }
+
+    public void spellingSpeaker2() throws Exception {
+        VoiceRSS.speakWord(wordLabel.getText(), VoiceRSS.englishUS);
+    }
+
     public void setData() {
         try {
             if (ID.equals(SEA)) {

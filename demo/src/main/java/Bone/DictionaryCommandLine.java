@@ -95,7 +95,7 @@ public class DictionaryCommandLine {
 
   public static void initSystemDictionaryManagement() throws SQLException, ClassNotFoundException {
     systemDictionaryManagement = new DictionaryManagement();
-    systemDictionaryManagement.importFromDatabase("dictionary.db");
+    systemDictionaryManagement.importFromDatabase("src/main/resources/media/database/dictionary.db");
   }
 
   public static void showMenu() {
