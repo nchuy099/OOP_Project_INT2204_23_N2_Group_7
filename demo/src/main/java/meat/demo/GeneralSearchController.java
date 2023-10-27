@@ -42,12 +42,14 @@ public class GeneralSearchController extends MainMenuController implements Initi
     protected Button speaker2;
     @FXML
     protected Label wordLabel;
+    @FXML
+    protected Label ipaLabel;
     protected DictionaryManagement wordDataManagement;
     protected Dictionary wordData;
 
     protected DictionaryManagement dictionaryManagement() throws SQLException, ClassNotFoundException {
         DictionaryManagement newManagement = new DictionaryManagement();
-        newManagement.importFromDatabase("src/main/resources/media/database/dictionary.db");
+        newManagement.importFromDatabase("src/main/resources/media/database/dict_hh.db");
         return newManagement;
     }
 
@@ -84,31 +86,15 @@ public class GeneralSearchController extends MainMenuController implements Initi
         wordListView.setItems(wordList);
     }
 
-    public String htmlEdit(String WordInfo) {
-        StringBuilder wordInfo = new StringBuilder(WordInfo);
-        for (int i = 0; i < wordInfo.length() - 8; i++) {
-            if (wordInfo.substring(i, i + 6).equals("<br />")) {
-                wordInfo.replace(i, i + 7, "<br />&#160;<span style=\"color:#3498db\">");
-                break;
-            }
-        }
-        for (int i = 0; i < wordInfo.length(); i++) {
-            if (wordInfo.substring(i, i + 6).equals("<br />")) {
-                    wordInfo.insert(i, "</span>");
-                    break;
-
-            }
-        }
-        return wordInfo.toString();
-    }
     @FXML
     public void showWordInfoView() {
         String input = searchField.getText();
         if (wordData.getWordList().containsKey(input)) {
             Word word = wordData.getWordList().get(input);
+            ipaLabel.setText("/" + word.getIpa() + "/");
             wordLabel.setText(word.getExpression());
-            String wordInfo = word.getWordInfo();
-            wordInfoView.getEngine().loadContent(htmlEdit(wordInfo), "text/html");
+            String wordHTML = word.getHtml();
+            wordInfoView.getEngine().loadContent(wordHTML, "text/html");
         } else {
             wordInfoView.getEngine().loadContent("Word not found!");
         }
@@ -121,6 +107,7 @@ public class GeneralSearchController extends MainMenuController implements Initi
     public void spellingSpeaker2() throws Exception {
         VoiceRSS.speakWord(wordLabel.getText(), VoiceRSS.englishUS);
     }
+
 
     public void setData() {
         try {
