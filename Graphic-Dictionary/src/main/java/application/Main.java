@@ -13,9 +13,11 @@ import static javafx.application.Application.launch;
 public class Main extends Application {
 
     public void start(Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/Search.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/style/Search.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("style/Main.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("style/Search.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("style/WordList.css").toExternalForm());
         stage.setTitle("Monolingo");
         stage.setScene(scene);
         stage.show();

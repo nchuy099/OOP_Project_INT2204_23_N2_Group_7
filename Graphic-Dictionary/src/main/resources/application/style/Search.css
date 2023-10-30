@@ -1,0 +1,35 @@
+.list-cell:empty {
+    -fx-opacity: 0;
+}
+
+#searchField {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+
+#searchListView {
+    -fx-background-color: transparent;
+}
+
+#showDefinitionButton {
+    -fx-background-image: url("/icon/normal/search.png");
+    -fx-background-size: 20;
+}
+
+#showDefinitionButton:hover {
+    -fx-background-size: 30;
+}
+
+#saveButton {
+    -fx-background-image: url("/icon/normal/save.png");
+}
+
+#speaker1 {
+    -fx-background-image: url("/icon/normal/speaker1.png");
+}
+
+#speaker2 {
+    -fx-background-image: url("/icon/normal/speaker2.png");
+}

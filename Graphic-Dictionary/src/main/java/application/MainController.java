@@ -1,37 +1,25 @@
 package application;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import javafx.scene.control.Button;
-import java.util.ArrayList;
+
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-
     @FXML
     AnchorPane rootPane;
     @FXML
     Label logo;
     @FXML
-    Button searchingButton;
+    Button searchButton;
+    @FXML
+    Button translateButton;
     @FXML
     Button wordListButton;
     @FXML
@@ -39,74 +27,115 @@ public class MainController implements Initializable {
     @FXML
     Button settingButton;
     @FXML
-    TextField textField;
+    AnchorPane mainPane;
     @FXML
-    ListView<String> searchedList;
+    AnchorPane searchPane;
+    @FXML
+    AnchorPane translatePane;
+    @FXML
+    AnchorPane wordListPane;
+    @FXML
+    AnchorPane gameMenuPane;
+    @FXML
+    AnchorPane settingPane;
 
-    ObservableList<String> tempSearchingWord = FXCollections.observableArrayList();
+    private MainController mainController;
+    private SearchController searchController;
+    private TranslateController translateController;
+    private WordListController wordListController;
+    private GameMenuController gameMenuController;
+    private SettingController settingController;
 
-    String[] testList = {"a", "ab", "abc", "b", "ba", "bc", "c", "a", "a", "a", "a", "a", "a", "a", "a"};
 
-    public MainController() {
+    private void setMainPane(AnchorPane anchorPane) {
+        mainPane.getChildren().setAll(anchorPane);
     }
 
-    public void switchToSearchScene(ActionEvent e) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Search.fxml"));
-        root = loader.load();
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/style/Search.css").toExternalForm());
-        stage.setScene(scene);
-        stage.show();
+    public void resetButtonStyle() {
+        searchButton.getStyleClass().removeAll("active");
+        translateButton.getStyleClass().removeAll("active");
+        wordListButton.getStyleClass().removeAll("active");
+        gameMenuButton.getStyleClass().removeAll("active");
+        settingButton.getStyleClass().removeAll("active");
+    }
+    public void switchToSearchScene() throws IOException {
+        resetButtonStyle();
+        searchButton.getStyleClass().add("active");
+        setMainPane(searchPane);
     }
 
-    public void switchToTranslateScene(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/Translate.fxml"));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/style/Translate.css").toExternalForm());
-        stage.setScene(scene);
-        stage.show();
+    public void switchToTranslateScene() throws IOException {
+        resetButtonStyle();
+        translateButton.getStyleClass().add("active");
+        setMainPane(translatePane);
     }
 
-    public void switchToWordListScene(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/WordList.fxml"));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/style/WordList.css").toExternalForm());
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void switchToGameMenuScene(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/GameMenu.fxml"));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/style/GameMenu.css").toExternalForm());
-        stage.setScene(scene);
-        stage.show();
+    public void switchToWordListScene() throws IOException {
+        resetButtonStyle();
+        wordListButton.getStyleClass().add("active");
+        setMainPane(wordListPane);
     }
 
-    public void switchToSetting(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/Setting.fxml"));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/style/Setting.css").toExternalForm());
-        stage.setScene(scene);
-        stage.show();
+    public void switchToGameMenuScene() throws IOException {
+        resetButtonStyle();
+        gameMenuButton.getStyleClass().add("active");
+        setMainPane(gameMenuPane);
     }
 
-    public void getUserInput() {
-        tempSearchingWord.clear();
-        String input = textField.getText();
-        for(String s : testList) {
-            if(s.length() >= input.length() && s.substring(0, input.length()).equals(input)) {
-                tempSearchingWord.add(s);
-            }
-        }
-        searchedList.setItems(tempSearchingWord);
+    public void switchToSettingScene() throws IOException {
+        resetButtonStyle();
+        settingButton.getStyleClass().add("active");
+        setMainPane(settingPane);
     }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        // Load scenes from fxml files
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Search.fxml"));
+            searchPane = loader.load();
+            searchController = loader.getController();
+            searchController.loadDictionaryData();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Translate.fxml"));
+            translatePane = loader.load();
+            translateController = loader.getController();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("WordList.fxml"));
+            wordListPane = loader.load();
+            wordListController = loader.getController();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("GameMenu.fxml"));
+            gameMenuPane = loader.load();
+            gameMenuController = loader.getController();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Setting.fxml"));
+            settingPane = loader.load();
+            settingController = loader.getController();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Set starting scene
+
+        searchButton.getStyleClass().add("active");
+        mainPane.getChildren().setAll(searchPane);
+
+
     }
 }

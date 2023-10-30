@@ -19,7 +19,7 @@ public class DictionaryManagement {
     public static Connection connection() throws SQLException {
         Connection connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3307/mydictionary",
-                "root", "password" // change "password" to your database password
+                "root", "Kien@7124" // change "password" to your database password
         );
         return connection;
     }
