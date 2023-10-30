@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.GameController">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../media/img/New%20folder/pitch.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ball" layoutX="386.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../media/img/New%20folder/ball.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="gk" layoutX="348.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../media/img/New%20folder/gk_prepare2.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="42.0" layoutY="409.0" mnemonicParsing="false" onAction="#gkSaveLowLeft" prefHeight="72.0" prefWidth="212.0" text="Button" />
+   </children>
+</AnchorPane>
