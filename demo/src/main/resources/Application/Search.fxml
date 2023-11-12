@@ -13,12 +13,12 @@
 <?import javafx.scene.web.HTMLEditor?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="805.0" style="-fx-background-color: #f0f8ff;" stylesheets="@../media/style/GameMenu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.GeneralSearchController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="805.0" style="-fx-background-color: #f0f8ff;" stylesheets="@../media/style/GameMenu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.SearchController">
    <children>
-      <AnchorPane layoutX="272.0" layoutY="5.0" prefHeight="570.0" prefWidth="525.0">
+      <AnchorPane layoutX="272.0" layoutY="5.0" prefHeight="570.0" prefWidth="526.0">
          <children>
-            <WebView fx:id="wordInfoView" layoutX="-14.0" layoutY="105.0" prefHeight="475.0" prefWidth="525.0" />
-            <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="109.0" prefHeight="467.0" prefWidth="525.0" visible="false" />
+            <WebView fx:id="wordInfoView" layoutY="105.0" prefHeight="480.0" prefWidth="525.0" />
+            <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="105.0" prefHeight="480.0" prefWidth="525.0" visible="false" />
             <Button fx:id="removeButton" layoutX="471.0" layoutY="37.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="47.0">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
@@ -48,7 +48,7 @@
                   <Font name="Calibri Bold" size="36.0" />
                </font>
             </Label>
-            <Button fx:id="speaker1" alignment="CENTER" layoutX="23.0" layoutY="72.0" mnemonicParsing="false" onAction="#spellingSpeaker1" prefHeight="30.0" prefWidth="20.0">
+            <Button fx:id="speaker1" alignment="CENTER" layoutX="23.0" layoutY="70.0" mnemonicParsing="false" onAction="#spellingSpeaker1" prefHeight="30.0" prefWidth="20.0">
                <graphic>
                   <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -57,7 +57,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="speaker2" alignment="CENTER" layoutX="66.0" layoutY="72.0" mnemonicParsing="false" onAction="#spellingSpeaker2" prefHeight="30.0" prefWidth="20.0">
+            <Button fx:id="speaker2" alignment="CENTER" layoutX="66.0" layoutY="70.0" mnemonicParsing="false" onAction="#spellingSpeaker2" prefHeight="30.0" prefWidth="20.0">
                <graphic>
                   <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -91,9 +91,9 @@
                      </graphic></Button>
                </children>
             </HBox>
-            <VBox layoutX="2.0" layoutY="109.0" prefHeight="485.0" prefWidth="250.0">
+            <VBox layoutX="2.0" layoutY="105.0" prefHeight="480.0" prefWidth="250.0">
                <children>
-                  <ListView fx:id="wordListView" layoutY="90.0" prefHeight="475.0" prefWidth="250.0" style="-fx-background-color: #f0ffff;" />
+                  <ListView fx:id="wordListView" layoutY="90.0" prefHeight="480.0" prefWidth="250.0" style="-fx-background-color: #f0ffff;" />
                </children>
             </VBox>
          </children>

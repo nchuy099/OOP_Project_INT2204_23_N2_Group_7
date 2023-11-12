@@ -44,7 +44,7 @@
          </children></AnchorPane>
       <VBox layoutX="-5.0" layoutY="147.0" prefHeight="306.0" prefWidth="100.0">
          <children>
-            <Button fx:id="searchButton" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#showSearchPane" prefHeight="85.0" prefWidth="85.0" text="SEARCH" translateX="13.0">
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#showSearchPane" prefHeight="85.0" prefWidth="85.0" text="SEARCH" translateX="13.0">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -53,7 +53,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="translateButton" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#showTranslatePane" prefHeight="85.0" prefWidth="85.0" text="TRANSLATE" textAlignment="CENTER" translateX="13.0">
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#showTranslatePane" prefHeight="85.0" prefWidth="85.0" text="TRANSLATE" textAlignment="CENTER" translateX="13.0">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -62,7 +62,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="bookmarkButton" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#showBookmarkPane" prefHeight="85.0" prefWidth="85.0" text="BOOKMARK" textAlignment="CENTER" translateX="13.0">
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#showBookmarkPane" prefHeight="85.0" prefWidth="85.0" text="BOOKMARK" textAlignment="CENTER" translateX="13.0">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" translateY="1.0">
                      <image>
@@ -71,9 +71,18 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#showGamePane" prefHeight="85.0" prefWidth="85.0" text="GAME" textAlignment="CENTER" translateX="13.0">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="1.0" translateY="1.0">
+                     <image>
+                        <Image url="@../media/img/game.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </VBox>
-      <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#showMainMenu" prefHeight="90.0" prefWidth="90.0">
+      <Button mnemonicParsing="false" onAction="#showMainMenu" prefHeight="90.0" prefWidth="90.0">
          <graphic>
             <ImageView fitHeight="81.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                <image>

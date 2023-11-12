@@ -1,7 +1,7 @@
 package Application;
 
-import CommandLine.GoogleTranslate;
-import CommandLine.VoiceRSS;
+import Application.API.GoogleTranslate;
+import Application.API.VoiceRSS;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
