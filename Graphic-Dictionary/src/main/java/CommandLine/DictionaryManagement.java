@@ -1,4 +1,4 @@
-package console;
+package CommandLine;
 
 import java.io.FileNotFoundException;
 import java.sql.*;
@@ -40,7 +40,7 @@ public class DictionaryManagement {
 
     /** removeWord1. */
     public void removeWord(String word_expression) {
-        if (!dictionary.getWordList().containsKey(word_expression)) {
+        if (dictionary.getWordList().containsKey(word_expression)) {
             SortedMap<String, Word> tmp = dictionary.getWordList();
             tmp.remove(word_expression);
             dictionary.setWordList(tmp);

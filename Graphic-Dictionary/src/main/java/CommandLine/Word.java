@@ -1,4 +1,4 @@
-package console;
+package CommandLine;
 
 public class Word {
     private String expression;

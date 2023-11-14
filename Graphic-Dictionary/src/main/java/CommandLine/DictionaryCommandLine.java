@@ -1,4 +1,4 @@
-package console;
+package CommandLine;
 
 import java.sql.SQLException;
 import java.util.*;
@@ -94,7 +94,7 @@ public class DictionaryCommandLine {
 
     public static void initSystemDictionaryManagement() throws SQLException, ClassNotFoundException {
         systemDictionaryManagement = new DictionaryManagement();
-        systemDictionaryManagement.importFromDatabase("application/data/dictionary.db");
+        systemDictionaryManagement.importFromDatabase("Application/data/dictionary.db");
     }
 
     public static void showMenu() {

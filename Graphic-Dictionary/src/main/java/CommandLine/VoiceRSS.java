@@ -1,4 +1,4 @@
-package console;
+package CommandLine;
 
 import com.voicerss.tts.AudioFormat;
 import com.voicerss.tts.VoiceParameters;

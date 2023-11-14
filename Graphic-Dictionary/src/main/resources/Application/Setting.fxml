@@ -5,9 +5,9 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameMenuController">
+<AnchorPane prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.SettingController">
     <children>
-        <Label alignment="CENTER" layoutX="344.0" layoutY="214.0" prefHeight="122.0" prefWidth="210.0" text="Game Menu">
+        <Label alignment="CENTER" layoutX="344.0" layoutY="214.0" prefHeight="122.0" prefWidth="210.0" text="Setting Pane">
             <font>
                 <Font size="30.0" />
             </font>

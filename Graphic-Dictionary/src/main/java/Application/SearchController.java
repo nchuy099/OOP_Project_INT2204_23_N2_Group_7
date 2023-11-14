@@ -1,6 +1,6 @@
-package application;
+package Application;
 
-import console.Word;
+import CommandLine.Word;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -55,7 +55,6 @@ public class SearchController extends GenaralController implements Initializable
         editor.setVisible(false);
         String inputWord = wordLabel.getText();
         String newMeaning = editor.getHtmlText().replace(" dir=\"ltr\"", "");
-        System.out.println(newMeaning);
         dictionary.getDictionary().getWordList().get(wordLabel.getText()).setMeaning(newMeaning);
         wordInfoView.getEngine().loadContent(newMeaning, "text/html");
         dictionary.updateWord(inputWord, new Word(inputWord, "", newMeaning, ""));

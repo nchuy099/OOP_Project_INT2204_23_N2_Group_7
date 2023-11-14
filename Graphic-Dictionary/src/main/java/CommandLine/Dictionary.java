@@ -1,4 +1,4 @@
-package console;
+package CommandLine;
 
 import java.util.SortedMap;
 import java.util.TreeMap;

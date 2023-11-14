@@ -1,6 +1,6 @@
-package application;
+package Application;
 
-import console.Word;
+import CommandLine.Word;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -53,7 +53,6 @@ public class BookmarkController extends GenaralController implements Initializab
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("bookmark");
         editor.setVisible(false);
     }
 
