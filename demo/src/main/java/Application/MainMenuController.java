@@ -1,6 +1,5 @@
 package Application;
 
-import Database.Database;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -27,19 +26,11 @@ public class MainMenuController implements Initializable {
     @FXML
     private AnchorPane bookmarkPane;
     @FXML
-    private GeneralSearchController searchController;
+    private AnchorPane gamePane;
     @FXML
-    private GeneralSearchController bookmarkController;
+    private GeneralController searchController;
     @FXML
-    private Button mainMenuButton;
-    @FXML
-    private Button searchButton;
-    @FXML
-    private Button translateButton;
-    @FXML
-    private Button bookmarkButton;
-    protected static String SEA = "SEA";
-    protected static String BMK = "BMK";
+    private GeneralController bookmarkController;
     protected static String isAtSearchPane = "SEARCH";
     protected static String isAtBookmarkPane = "BOOKMARK";
     protected static String isAtUnknown = "UNKNOWN";
@@ -79,20 +70,18 @@ public class MainMenuController implements Initializable {
         isAtPane = isAtBookmarkPane;
     }
 
+    @FXML
+    public void showGamePane() {
+        setMainContent(gamePane);
+        isAtPane = isAtUnknown;
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-            Database.initializeDatabase();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Search.fxml"));
             searchPane = loader.load();
             searchController = loader.getController();
-            searchController.setID(SEA);
             searchController.setData();
         } catch (Exception e) {
             e.printStackTrace();
@@ -107,8 +96,13 @@ public class MainMenuController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Bookmark.fxml"));
             bookmarkPane = loader.load();
             bookmarkController = loader.getController();
-            bookmarkController.setID(BMK);
             bookmarkController.setData();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Game.fxml"));
+            gamePane = loader.load();
         } catch (Exception e) {
             e.printStackTrace();
         }

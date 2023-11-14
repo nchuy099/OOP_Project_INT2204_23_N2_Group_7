@@ -1,27 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.GameController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../media/img/New%20folder/pitch.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="ball" layoutX="386.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../media/img/New%20folder/ball.png" />
+            <Image url="@../media/img/pitch.png" />
          </image>
       </ImageView>
       <ImageView fx:id="gk" layoutX="348.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../media/img/New%20folder/gk_prepare2.png" />
+            <Image url="@../media/img/gk_prepare2.png" />
          </image>
       </ImageView>
-      <Button layoutX="42.0" layoutY="409.0" mnemonicParsing="false" onAction="#gkSaveLowLeft" prefHeight="72.0" prefWidth="212.0" text="Button" />
+      <ImageView fx:id="ball" layoutX="387.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../media/img/ball.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="optionB" layoutX="557.0" layoutY="398.0" mnemonicParsing="false" onAction="#checkGoalB" prefHeight="72.0" prefWidth="212.0" text="High Right" />
+      <Button fx:id="optionD" layoutX="557.0" layoutY="506.0" mnemonicParsing="false" onAction="#checkGoalD" prefHeight="72.0" prefWidth="212.0" text="Low Right" />
+      <Button fx:id="optionC" layoutX="33.0" layoutY="506.0" mnemonicParsing="false" onAction="#checkGoalC" prefHeight="72.0" prefWidth="212.0" text="Low Left" />
+      <Button fx:id="optionA" layoutX="33.0" layoutY="398.0" mnemonicParsing="false" onAction="#checkGoalA" prefHeight="72.0" prefWidth="212.0" text="High Left" />
+      <ImageView fitHeight="130.0" fitWidth="343.0" layoutX="233.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../media/img/scoreboard.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="288.0" layoutX="270.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../media/img/Table.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="question" alignment="CENTER" layoutX="258.0" layoutY="447.0" prefHeight="80.0" prefWidth="288.0" text="Label">
+         <font>
+            <Font size="37.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.6666666865348816" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <VBox layoutX="292.0" layoutY="21.0" prefHeight="114.0" prefWidth="279.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="13.0">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="26.0">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="39.0">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="52.0">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="13.0">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="26.0">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="39.0">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="52.0">
+                     <image>
+                        <Image url="@../media/img/yes.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
