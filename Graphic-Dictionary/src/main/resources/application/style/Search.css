@@ -22,7 +22,7 @@
     -fx-background-size: 30;
 }
 
-#saveButton {
+#addButton {
     -fx-background-image: url("/icon/normal/save.png");
 }
 
@@ -32,4 +32,12 @@
 
 #speaker2 {
     -fx-background-image: url("/icon/normal/speaker2.png");
+}
+
+#editButton {
+    -fx-background-image: url("/icon/normal/edit.png");
+}
+
+#saveButton {
+       -fx-background-image: url("/icon/normal/save2.png");
 }

@@ -35,7 +35,7 @@ public class DictionaryManagement {
 
     /** addWord2. */
     public void addWord(String word_expression, String word_meaning) {
-        addWord(new Word(word_meaning, word_meaning));
+        addWord(new Word(word_expression, word_meaning));
     }
 
     /** removeWord1. */
@@ -115,15 +115,19 @@ public class DictionaryManagement {
         }
     }
 
-    public void importFromDatabase(String database)
+    public DictionaryManagement importFromDatabase(String database)
             throws SQLException, ClassNotFoundException {
+        DictionaryManagement management = new DictionaryManagement();
         Class.forName("org.sqlite.JDBC");
         Connection connection = DriverManager.getConnection("jdbc:sqlite:" + database);
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM tbl_edict");
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM av");
         while (resultSet.next()) {
-            addWord(new Word(resultSet.getString("word"),
-                    resultSet.getString("detail")));
+            management.addWord(new Word(resultSet.getString("word"),
+                    resultSet.getString("description"),
+                    resultSet.getString("html"),
+                    resultSet.getString("pronounce")));
         }
+        return management;
     }
 }

@@ -77,7 +77,7 @@ public class GeneralSearchController extends MainMenuController implements Initi
     public void handleSearchBar() {
         wordList.clear();
         String input = searchField.getText();
-        for (String word : wordData.getWordList().keySet()) {
+        for (String word: wordData.getWordList().keySet()) {
             if (word.length() >= input.length()
                     && word.substring(0, input.length()).equals(input)) {
                 wordList.add(word);
@@ -108,11 +108,12 @@ public class GeneralSearchController extends MainMenuController implements Initi
         VoiceRSS.speakWord(wordLabel.getText(), VoiceRSS.englishUS);
     }
 
+
     public void setData() {
         try {
             if (ID.equals(SEA)) {
                 wordDataManagement = dictionaryManagement();
-            } else if (ID.equals(BMK)) {
+            } else if (ID.equals(BMK)){
                 wordDataManagement = bookmarkManagement();
             }
         } catch (SQLException e) {

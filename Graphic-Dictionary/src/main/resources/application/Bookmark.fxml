@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookmarkController">
+    <children>
+        <TextField fx:id="searchField" onKeyReleased="#setListViewItem" prefHeight="40.0" prefWidth="205.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+        <Button fx:id="showDefinitionButton" layoutX="741.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleClickShowDefinitionButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-background-radius: 20;" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="10.0" />
+        <ListView fx:id="searchListView" prefHeight="546.0" prefWidth="205.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="51.0" />
+        <AnchorPane layoutX="404.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <Label fx:id="wordLabel" layoutX="113.0" layoutY="54.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Definition" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font name="System Italic" size="40.0" />
+                    </font>
+                </Label>
+                <WebView fx:id="wordInfoView" fontScale="2.0" layoutX="128.0" layoutY="170.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+                <Button fx:id="changeWordMeaningButton" layoutX="582.0" layoutY="4.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0" />
+            <HTMLEditor fx:id="editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="200.0" prefWidth="506.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+            <Button fx:id="speaker1" layoutX="71.0" layoutY="44.0" mnemonicParsing="false" onAction="#spellingSpeaker1" prefHeight="50.0" prefWidth="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0" />
+            <Button fx:id="speaker2" layoutX="109.0" layoutY="51.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0" />
+            <Button fx:id="removeButton" layoutX="582.0" layoutY="53.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0" />
+            <Button fx:id="saveButton" layoutX="502.0" layoutY="41.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="50.0" />
+            <Button fx:id="editButton" layoutX="299.0" layoutY="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="50.0" />
+            <Button fx:id="addButton" layoutX="465.0" layoutY="53.0" mnemonicParsing="false" onAction="#addToBookmark" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="50.0" />
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
