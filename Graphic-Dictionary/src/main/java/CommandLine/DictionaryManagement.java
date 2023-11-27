@@ -115,7 +115,7 @@ public class DictionaryManagement {
         }
     }
 
-    public DictionaryManagement importFromDatabase(String database)
+    public void importFromDatabase(String database)
             throws SQLException, ClassNotFoundException {
         DictionaryManagement management = new DictionaryManagement();
         Class.forName("org.sqlite.JDBC");
@@ -128,6 +128,5 @@ public class DictionaryManagement {
                     resultSet.getString("html"),
                     resultSet.getString("pronounce")));
         }
-        return management;
     }
 }

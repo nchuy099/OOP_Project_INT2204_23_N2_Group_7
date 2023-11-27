@@ -11,9 +11,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
-
-    // Main Attribute
-
     @FXML
     private Button searchButton;
     @FXML

@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 public class SearchController extends GenaralController implements Initializable {
 
     public void loadDictionaryData() throws SQLException, ClassNotFoundException {
-        dictionary = dictionary.importFromDatabase("src/main/resources/application/data/dict_hh.db");
+        dictionary.importFromDatabase("src/main/resources/application/data/dict_hh.db");
     }
 
     @FXML

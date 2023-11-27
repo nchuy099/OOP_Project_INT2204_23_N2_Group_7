@@ -13,7 +13,6 @@ public class GoogleTranslate {
     public static String english = "en";
     private static final String myURL = "https://script.google.com/macros" +
             "/s/AKfycby6pKJaIKmhWK9aeNTh9yPbl3H3pY3mAEITYE6D_XCvWdTczf_nwyYoWQf4e7Vj1K0/exec";
-
     public static String translate(String langFrom, String langTo, String text) throws IOException {
         // INSERT YOU URL HERE
         String urlStr = myURL +
@@ -37,5 +36,6 @@ public class GoogleTranslate {
         String text = "chào";
         System.out.println("Translated text: " + translate("vi", "en", text));
     }
+
 
 }

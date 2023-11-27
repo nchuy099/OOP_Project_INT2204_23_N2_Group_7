@@ -1,16 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.TranslateController">
-    <children>
-        <Label alignment="CENTER" layoutX="344.0" layoutY="214.0" prefHeight="122.0" prefWidth="210.0" text="Translate Pane">
-            <font>
-                <Font size="30.0" />
-            </font>
-        </Label>
-    </children>
+   <children>
+      <VBox layoutX="77.0" layoutY="37.0" prefHeight="220.0" prefWidth="727.0" style="-fx-border-color: #000000; -fx-border-width: 1; -fx-padding: 0.2;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="708.0" style="-fx-background-radius: 10;">
+               <children>
+                  <Button fx:id="mainFromButton" minWidth="44.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="94.0" text="Anh">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="extraFromButton" minWidth="44.0" mnemonicParsing="false" onAction="#tranLang" prefHeight="38.0" prefWidth="94.0" text="Việt">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="fromSpeakButton" mnemonicParsing="false" onAction="#FromSpeak" prefHeight="54.0" prefWidth="26.0" />
+               </children>
+            </HBox>
+            <TextArea fx:id="inText" prefHeight="200.0" prefWidth="200.0" promptText="Nhập từ hoặc đoạn văn..." style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
+         </children>
+      </VBox>
+      <VBox layoutX="20.0" layoutY="307.0" prefHeight="220.0" prefWidth="708.0" style="-fx-border-width: 1; -fx-border-color: #000000; -fx-padding: 0.2;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="708.0">
+               <children>
+                  <Button fx:id="mainToButton" minWidth="44.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" text="Việt">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="extraToButton" minWidth="44.0" mnemonicParsing="false" onAction="#tranLang" prefHeight="30.0" prefWidth="94.0" text="Anh">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="toSpeakButton" mnemonicParsing="false" onAction="#ToSpeak" prefHeight="26.0" prefWidth="28.0" />
+               </children>
+            </HBox>
+            <TextArea fx:id="outText" prefHeight="205.0" prefWidth="708.0" promptText="Bản dịch" style="-fx-background-color: transparent; -fx-background-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+         </children>
+      </VBox>
+      <Button fx:id="translateButton2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="388.0" layoutY="253.0" mnemonicParsing="false" onAction="#translate" prefHeight="50.0" prefWidth="123.0" text=" Dịch" AnchorPane.bottomAnchor="253.39999999999998" AnchorPane.topAnchor="253.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

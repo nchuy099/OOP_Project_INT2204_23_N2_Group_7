@@ -11,9 +11,10 @@ import java.io.File;
 
 import java.io.FileOutputStream;
 
+
 public class VoiceRSS {
     private static final String API_KEY = "bd575d5f42964670a6456427ab520658";
-    private static final String AUDIO_PATH = "src/main/resources/media/audio/audio.wav";
+    private static final String AUDIO_PATH = "src/main/resources/Application/audio/audio.wav";
     public static String voiceNameVN = "Chi";
     public static String voiceNameUS = "John";
     public static String voiceNameUK = "Alice";
@@ -57,3 +58,5 @@ public class VoiceRSS {
         speakWord("hello how are you i'm fine thank you and you", englishUK);
     }
 }
+
+
