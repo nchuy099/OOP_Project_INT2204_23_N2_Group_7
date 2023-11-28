@@ -1,6 +1,6 @@
 package Application.Dictionary;
 
-import CommandLine.Word;
+import CommandLine.Dictionary.Word;
 
 public class AppWord extends Word {
     private String ipa;

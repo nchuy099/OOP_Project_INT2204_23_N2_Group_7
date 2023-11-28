@@ -1,6 +1,6 @@
 package Application.Dictionary;
 
-import CommandLine.DictionaryManagement;
+import CommandLine.Dictionary.DictionaryManagement;
 import java.sql.*;
 
 public class AppDictionaryManagement extends DictionaryManagement {

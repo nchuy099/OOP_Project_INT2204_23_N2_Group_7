@@ -1,4 +1,4 @@
-package CommandLine;
+package CommandLine.Dictionary;
 
 import java.sql.SQLException;
 import java.util.*;

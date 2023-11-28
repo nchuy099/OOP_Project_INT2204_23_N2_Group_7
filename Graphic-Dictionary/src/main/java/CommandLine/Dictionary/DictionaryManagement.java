@@ -1,4 +1,4 @@
-package CommandLine;
+package CommandLine.Dictionary;
 
 import java.io.FileNotFoundException;
 import java.sql.*;
@@ -8,17 +8,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class DictionaryManagement {
-    private Dictionary dictionary;
+    private CommandLine.Dictionary.Dictionary dictionary;
 
     public DictionaryManagement() {
-        dictionary = new Dictionary();
+        dictionary = new CommandLine.Dictionary.Dictionary();
     }
 
-    public DictionaryManagement(Dictionary dictionary) {
+    public DictionaryManagement(CommandLine.Dictionary.Dictionary dictionary) {
         this.dictionary = dictionary;
     }
 
-    public void setDictionary(Dictionary dictionary) {
+    public void setDictionary(CommandLine.Dictionary.Dictionary dictionary) {
         this.dictionary = dictionary;
     }
 
@@ -117,13 +117,12 @@ public class DictionaryManagement {
 
     public void importFromDatabase(String database)
             throws SQLException, ClassNotFoundException {
-        DictionaryManagement management = new DictionaryManagement();
         Class.forName("org.sqlite.JDBC");
         Connection connection = DriverManager.getConnection("jdbc:sqlite:" + database);
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT * FROM av");
         while (resultSet.next()) {
-            management.addWord(new Word(resultSet.getString("word"),
+            addWord(new Word(resultSet.getString("word"),
                     resultSet.getString("description"),
                     resultSet.getString("html"),
                     resultSet.getString("pronounce")));

@@ -1,4 +1,4 @@
-package CommandLine;
+package CommandLine.Dictionary;
 
 public class Word {
     private String expression;

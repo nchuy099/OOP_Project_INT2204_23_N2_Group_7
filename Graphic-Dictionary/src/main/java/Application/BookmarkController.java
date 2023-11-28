@@ -1,6 +1,6 @@
 package Application;
 
-import CommandLine.Word;
+import CommandLine.Dictionary.Word;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,8 +12,7 @@ import java.util.ResourceBundle;
 public class BookmarkController extends GenaralController implements Initializable {
 
     public void loadWordListData() {
-//        bookmarkListManagement.insertFromFile("src/main/resources/application/data/wordList.txt");
-//        bookmarkList =  bookmarkListManagement.getDictionary();
+        bookmarkList.insertFromFile("src/main/resources/application/data/bookmark.txt");
     }
 
     @FXML

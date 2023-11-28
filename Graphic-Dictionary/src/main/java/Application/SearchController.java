@@ -1,6 +1,6 @@
 package Application;
 
-import CommandLine.Word;
+import CommandLine.Dictionary.Word;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

@@ -1,4 +1,4 @@
-package CommandLine;
+package CommandLine.Dictionary;
 
 import java.util.SortedMap;
 import java.util.TreeMap;

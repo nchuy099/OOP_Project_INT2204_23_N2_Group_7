@@ -18,6 +18,7 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("style/Main.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("style/Search.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("style/Translate.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("style/Game.css").toExternalForm());
         stage.setTitle("Monolingo");
         stage.setScene(scene);
         stage.show();

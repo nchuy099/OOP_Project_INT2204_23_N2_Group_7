@@ -1,9 +1,9 @@
 package Application;
 
-import CommandLine.DictionaryManagement;
-import CommandLine.VoiceRSS;
+import CommandLine.Dictionary.DictionaryManagement;
+import CommandLine.Dictionary.VoiceRSS;
 
-import CommandLine.Word;
+import CommandLine.Dictionary.Word;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

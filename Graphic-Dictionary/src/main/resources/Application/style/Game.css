@@ -1,0 +1,25 @@
+#game1Button {
+    -fx-background-image:  url("/icon/normal/game1.png");
+    -fx-background-size: 130;
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+#game1Button:hover {
+    -fx-background-size: 140;
+    -fx-text-fill: white;
+    -fx-font-size: 21;
+}
+
+#game2Button {
+    -fx-background-image:  url("/icon/normal/game2.png");
+    -fx-background-size: 130;
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+#game2Button:hover {
+    -fx-background-size: 140;
+    -fx-text-fill: white;
+    -fx-font-size: 21;
+}
