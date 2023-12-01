@@ -18,12 +18,12 @@ public class MainApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(getClass().getResource("/media/style/Main.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("/media/style/Search.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/media/style/Translate.css").toExternalForm());
         stage.setTitle("Dictionary");
         stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest(event -> Platform.exit());
     }
-
 
     public static void main(String[] args) throws SQLException {
         launch(args);

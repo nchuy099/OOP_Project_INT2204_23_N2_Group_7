@@ -1,9 +1,15 @@
 .root {
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: transparent;
+
+    -background-color-1: #080928;
+    -background-color-2: #151342;
+    -background-color-3: #20234D;
+
+    -text-color: white;
 }
 
 .button {
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: transparent;
     -fx-background-size: 40;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -11,7 +17,7 @@
     -fx-alignment: bottom-center;
     -fx-font-size: 11px;
     -fx-font-weight: bold;
-    -fx-text-fill: #B1B1B1;
+    -fx-text-fill: -text-color;
     -fx-background-radius: 10;
 }
 
@@ -24,11 +30,19 @@
     -fx-background-size: 60;
     -fx-font-size: 14px;
     -fx-text-fill: transparent;
-    -fx-background-color: #5163F1;
+    -fx-background-color: transparent;
+}
+
+#rootPane {
+    -fx-background-color: linear-gradient(to right bottom, -background-color-1, #1B0138);
+}
+
+#menuBar {
+    -fx-background-color: linear-gradient(to left top, -background-color-3, #1B0138);
 }
 
 #mainPane {
-    -fx-background-color: #F0F0F0;
+    -fx-background-color: linear-gradient(to left top, -background-color-2, #1B0138);
 }
 
 #searchButton {
