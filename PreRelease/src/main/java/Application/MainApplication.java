@@ -16,6 +16,8 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws Exception{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(getClass().getResource("/media/style/Main.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/media/style/Search.css").toExternalForm());
         stage.setTitle("Dictionary");
         stage.setScene(scene);
         stage.show();

@@ -16,17 +16,17 @@
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../media/img/pitch.png" />
+            <Image url="@../media/img/game/pitch.png" />
          </image>
       </ImageView>
       <ImageView fx:id="gk" layoutX="348.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../media/img/gk_prepare2.png" />
+            <Image url="@../media/img/game/gk_prepare2.png" />
          </image>
       </ImageView>
       <ImageView fx:id="ball" layoutX="387.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../media/img/ball.png" />
+            <Image url="@../media/img/game/ball.png" />
          </image>
       </ImageView>
       <Button fx:id="optionB" layoutX="557.0" layoutY="398.0" mnemonicParsing="false" onAction="#checkGoalB" prefHeight="72.0" prefWidth="212.0" text="High Right" />
@@ -35,12 +35,12 @@
       <Button fx:id="optionA" layoutX="33.0" layoutY="398.0" mnemonicParsing="false" onAction="#checkGoalA" prefHeight="72.0" prefWidth="212.0" text="High Left" />
       <ImageView fitHeight="130.0" fitWidth="343.0" layoutX="233.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../media/img/scoreboard.png" />
+            <Image url="@../media/img/game/scoreboard.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="72.0" fitWidth="288.0" layoutX="270.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../media/img/Table.png" />
+            <Image url="@../media/img/game/Table.png" />
          </image>
       </ImageView>
       <Label fx:id="question" alignment="CENTER" layoutX="258.0" layoutY="447.0" prefHeight="80.0" prefWidth="288.0" text="Label">
@@ -70,27 +70,27 @@
                <children>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="13.0">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="26.0">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="39.0">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="52.0">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                </children>
@@ -99,27 +99,27 @@
                <children>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="13.0">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="26.0">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="39.0">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" translateX="52.0">
                      <image>
-                        <Image url="@../media/img/yes.png" />
+                        <Image url="@../media/img/game/yes.png" />
                      </image>
                   </ImageView>
                </children>

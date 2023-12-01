@@ -84,9 +84,6 @@ public class MainMenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        // Load scenes from fxml files
-
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Search.fxml"));
             searchPane = loader.load();
@@ -98,7 +95,7 @@ public class MainMenuController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Translate.fxml"));
             translatePane = loader.load();
-            translateController = loader.getController();
+            //translateController = loader.getController();
         } catch (Exception e) {
             e.printStackTrace();
         }

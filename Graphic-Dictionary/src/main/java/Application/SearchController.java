@@ -19,10 +19,10 @@ public class SearchController extends GenaralController implements Initializable
     public void setListViewItem() {
         searchList.clear();
         String input = searchField.getText();
-        if(input.isEmpty()) {
+        if (input.isEmpty()) {
             searchList.clear();
             searchListView.setItems(searchList);
-        }else {
+        } else {
             for (String word : dictionary.getDictionary().getWordList().keySet()) {
                 if (word.length() >= input.length() && word.substring(0, input.length()).equals(input)) {
                     searchList.add(word);

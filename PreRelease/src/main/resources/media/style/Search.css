@@ -1,0 +1,43 @@
+.list-cell:empty {
+    -fx-opacity: 0;
+}
+
+#searchField {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+
+#listView {
+    -fx-background-color: transparent;
+}
+
+#lookUpButton {
+    -fx-background-image: url("/media/img/normal/search.png");
+    -fx-background-size: 20;
+}
+
+#lookUpButton:hover {
+    -fx-background-size: 30;
+}
+
+#addButton {
+    -fx-background-image: url("/media/img/normal/save.png");
+}
+
+#speaker1 {
+    -fx-background-image: url("/media/img/normal/speaker1.png");
+}
+
+#speaker2 {
+    -fx-background-image: url("/media/img/normal/speaker2.png");
+}
+
+#editButton {
+    -fx-background-image: url("/media/img/normal/edit.png");
+}
+
+#saveButton {
+       -fx-background-image: url("/media/img/normal/save2.png");
+}
