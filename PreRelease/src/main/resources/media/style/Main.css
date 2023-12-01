@@ -1,0 +1,73 @@
+.root {
+    -fx-background-color: #FFFFFF;
+}
+
+.button {
+    -fx-background-color: #FFFFFF;
+    -fx-background-size: 40;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-position-y: -20px;
+    -fx-alignment: bottom-center;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B1B1B1;
+    -fx-background-radius: 10;
+}
+
+.button:hover {
+    -fx-background-size: 50;
+    -fx-font-size: 14px;
+}
+
+.button.active {
+    -fx-background-size: 60;
+    -fx-font-size: 14px;
+    -fx-text-fill: transparent;
+    -fx-background-color: #5163F1;
+}
+
+#mainPane {
+    -fx-background-color: #F0F0F0;
+}
+
+#searchButton {
+    -fx-background-image: url("/media/img/normal/search.png");
+}
+
+#searchButton.active {
+    -fx-background-image: url("/media/img/active/search.png");
+}
+
+#translateButton {
+    -fx-background-image: url("/media/img/normal/translate.png");
+}
+
+#translateButton.active {
+    -fx-background-image: url("/media/img/active/translate.png");
+}
+
+#wordListButton {
+    -fx-background-image: url("/media/img/normal/bookmark.png");
+}
+
+#wordListButton.active {
+    -fx-background-image: url("/media/img/active/bookmark.png");
+}
+
+#gameMenuButton {
+    -fx-background-image: url("/media/img/normal/game.png");
+}
+
+#gameMenuButton.active {
+    -fx-background-image: url("/media/img/active/game.png");
+}
+
+#settingButton {
+    -fx-background-image: url("/media/img/normal/setting.png");
+}
+
+#settingButton.active {
+    -fx-background-image: url("/media/img/active/setting.png");
+}
+

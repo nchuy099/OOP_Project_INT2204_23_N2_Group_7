@@ -10,9 +10,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.HTMLEditor;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -34,6 +36,8 @@ public class SearchController implements Initializable {
     protected WebView wordInfoView;
     @FXML
     protected HTMLEditor editor;
+    @FXML
+    private Button lookUpButton;
     protected Dictionary dictionary;
 
     public void reset() {
@@ -45,22 +49,23 @@ public class SearchController implements Initializable {
         wordInfoView.getEngine().loadContent("");
         wordLabel.setText("Word");
         editor.setVisible(false);
-        // set listView
-        obWordList.addAll(dictionary.getWordList().keySet());
-        listView.setItems(obWordList);
     }
 
     @FXML
     public void setListView() {
         obWordList.clear();
         String input = searchField.getText();
-        for (Word word: dictionary.getWordList().values()) {
-            if (word.getExpression().length() >= input.length()
-                    && word.getExpression().substring(0, input.length()).equals(input)) {
-                obWordList.add(word.getExpression());
+        if(input.isEmpty()) {
+            obWordList.clear();
+            listView.setItems(obWordList);
+        }else {
+            for (String word : dictionary.getWordList().keySet()) {
+                if (word.length() >= input.length() && word.substring(0, input.length()).equals(input)) {
+                    obWordList.add(word);
+                }
             }
+            listView.setItems(obWordList);
         }
-        listView.setItems(obWordList);
     }
 
     public void showWordInfoView(String input) {
@@ -109,8 +114,8 @@ public class SearchController implements Initializable {
 
     @FXML
     public void addToBookmark() throws SQLException, ClassNotFoundException {
-        Word word = dictionary.getWordList().get(wordLabel.getText());
-        DictionaryManagement.addWord(word, Bookmark.getInstance());
+//        Word word = dictionary.getWordList().get(wordLabel.getText());
+//        DictionaryManagement.addWord(word, Bookmark.getInstance());
     }
 
     public void handleClickEditButton() {
@@ -131,7 +136,7 @@ public class SearchController implements Initializable {
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            dictionary = Bookmark.getInstance();
+            dictionary = Search.getInstance();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
