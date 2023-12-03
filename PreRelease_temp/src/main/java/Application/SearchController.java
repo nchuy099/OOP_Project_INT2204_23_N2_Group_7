@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -37,6 +38,14 @@ public class SearchController implements Initializable {
     @FXML
     protected VBox wordLayout;
     protected Dictionary dictionary;
+
+    public void showWarningAlert() {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Warning");
+        alert.setHeaderText(null);
+        alert.setContentText("No Word Selection!");
+        alert.showAndWait();
+    }
 
     public void reset() {
         // clear all info
@@ -66,6 +75,10 @@ public class SearchController implements Initializable {
     }
 
     public void showWordLayout(String input) throws IOException, SQLException, ClassNotFoundException {
+        if (input.isEmpty()) {
+            showWarningAlert();
+            return;
+        }
         wordLayout.getChildren().clear();
         wordLabel.setText(input);
         List<Word> wordList = DictionaryManagement.lookUpWord(input, Search.getInstance());
@@ -73,8 +86,7 @@ public class SearchController implements Initializable {
             FXMLLoader noteLoader = new FXMLLoader(getClass().getResource("Note.fxml"));
             AnchorPane notePane = noteLoader.load();
             NoteController noteController = noteLoader.getController();
-            FXMLLoader editLoader = new FXMLLoader(getClass().getResource("Edit.fxml"));
-            noteController.setData(wordList.get(i), editLoader);
+            noteController.setData(wordList.get(i));
             wordLayout.getChildren().add(notePane);
         }
 
