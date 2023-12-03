@@ -41,8 +41,13 @@ public class MainMenuController implements Initializable {
     }
 
     @FXML
-    public void showBookmarkPane() {
-        setMainPane(bookmarkPane);
+    public void showFlashcardWindow(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Flashcard.fxml"));
+        Scene scene = new Scene(loader.load());
+        stage.setTitle("Flashcard");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -50,6 +55,7 @@ public class MainMenuController implements Initializable {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("GameMenu.fxml"));
         Scene scene = new Scene(loader.load());
+        stage.setTitle("Game");
         stage.setScene(scene);
         stage.show();
     }
