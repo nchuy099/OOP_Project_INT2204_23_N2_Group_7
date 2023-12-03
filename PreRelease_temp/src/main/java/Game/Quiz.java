@@ -24,11 +24,11 @@ public class Quiz {
 
     private List<String> generateOptions() {
         List<String> list = new ArrayList<>();
-        int par = dictionary.getWordList().size();
+        int temp = dictionary.getWordList().size();
         for (int i = 0; i < 4; i++) {
-            int option_no = rand.nextInt(par);
+            int option_no = rand.nextInt(temp);
             Word word = dictionary.getWordList().get(option_no);
-            list.add(word.getMeaning());
+            list.add(word.getExpression());
         }
         return list;
     }
@@ -40,8 +40,8 @@ public class Quiz {
     public Quiz() throws SQLException, ClassNotFoundException {
         dictionary = Search.getInstance();
         Word word = generateWord();
-        question = word.getExpression();
-        answer = word.getMeaning();
+        question = word.getMeaning();
+        answer = word.getExpression();
         options = generateOptions();
         options.set(generateAnswerPos(), answer);
     }

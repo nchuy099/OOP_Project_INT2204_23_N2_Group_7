@@ -8,7 +8,9 @@ import DictionaryP.Word;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
 
+import java.math.BigDecimal;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -19,6 +21,9 @@ public class FlashcardController implements Initializable{
     private static final int Back = 0;
     protected int status;
     protected int currentNo;
+
+    @FXML
+    protected ProgressBar progressBar;
 
     @FXML
     protected Button currentCard;
