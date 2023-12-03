@@ -16,6 +16,16 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
     @FXML
+    private Button searchButton;
+    @FXML
+    private Button translateButton;
+    @FXML
+    private Button wordListButton;
+    @FXML
+    private Button gameMenuButton;
+    @FXML
+    private Button settingButton;
+    @FXML
     private AnchorPane mainPane;
     @FXML
     private AnchorPane searchPane;
@@ -29,20 +39,34 @@ public class MainMenuController implements Initializable {
         mainPane.getChildren().setAll(anchorPane);
     }
 
+    public void resetButtonStyle() {
+        searchButton.getStyleClass().removeAll("active");
+        translateButton.getStyleClass().removeAll("active");
+        wordListButton.getStyleClass().removeAll("active");
+        gameMenuButton.getStyleClass().removeAll("active");
+        settingButton.getStyleClass().removeAll("active");
+    }
+
     @FXML
     public void showSearchPane() {
         setMainPane(searchPane);
+        resetButtonStyle();
+        searchButton.getStyleClass().add("active");
         searchController.reset();
     }
 
     @FXML
     public void showTranslatePane() {
         setMainPane(translatePane);
+        resetButtonStyle();
+        translateButton.getStyleClass().add("active");
     }
 
     @FXML
     public void showBookmarkPane() {
         setMainPane(bookmarkPane);
+        resetButtonStyle();
+        wordListButton.getStyleClass().add("active");
     }
 
     @FXML
@@ -56,7 +80,8 @@ public class MainMenuController implements Initializable {
 
     @FXML
     public void showSettingPane(ActionEvent event){
-
+        resetButtonStyle();
+        settingButton.getStyleClass().add("active");
     }
 
 
@@ -85,6 +110,6 @@ public class MainMenuController implements Initializable {
             e.printStackTrace();
         }
 
-        setMainPane(searchPane);
+        //setMainPane(searchPane);
     }
 }
