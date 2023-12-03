@@ -1,0 +1,76 @@
+.root {
+    -fx-background-color: #080928;
+
+    -background-color-1: #080928;
+    -background-color-2: #151342;
+    -background-color-3: #20234D;
+
+    -text-color: white;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-background-color: #FFFFFF;
+}
+
+.list-cell:empty {
+    -fx-opacity: 0;
+}
+
+#wordInfoView {
+    -fx-page-fill: transparent;
+}
+
+#editor {
+    -fx-page-fill: red;
+}
+
+#searchField {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #12004A;
+    -fx-border-width: 2;
+    -fx-text-fill: black;
+}
+
+#listView {
+    -fx-background-color: transparent;
+}
+
+#lookUpButton {
+    -fx-background-image: url("/media/img/normal/lookup.png");
+    -fx-background-size: 20;
+}
+
+#lookUpButton:hover {
+    -fx-background-size: 30;
+}
+
+#addButton {
+    -fx-background-image: url("/media/img/normal/plus.png");
+}
+
+#markButton {
+    -fx-background-image: url("/media/img/normal/save.png");
+}
+
+#speaker1 {
+    -fx-background-image: url("/media/img/normal/speaker1.png");
+}
+
+#speaker2 {
+    -fx-background-image: url("/media/img/normal/speaker2.png");
+}
+
+#editButton {
+    -fx-background-image: url("/media/img/normal/edit.png");
+}
+
+#saveButton {
+    -fx-background-image: url("/media/img/normal/save2.png");
+}
+
+#removeButton {
+    -fx-background-image: url("/media/img/normal/delete.png");
+}

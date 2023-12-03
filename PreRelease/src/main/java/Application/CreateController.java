@@ -25,7 +25,7 @@ public class CreateController {
 
     @FXML
     public void createNewWord() throws SQLException, ClassNotFoundException {
-        Dictionary dictionary = Bookmark.getInstance();
+        Dictionary dictionary = Search.getInstance();
         Word word = new Word(expression.getText(), meaning.getText(),
                 html.getHtmlText(), "");
         if (dictionary.getWordList().containsKey(word.getExpression())) {

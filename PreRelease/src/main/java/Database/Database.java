@@ -33,14 +33,12 @@ public class Database {
     }
 
     public static void insertIntoTable(String table, Data data) throws SQLException, ClassNotFoundException {
-        String sql = "INSERT INTO " + table + " (id, word, html, description, pronounce) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO " + table + " (word, html, description) VALUES (?, ?, ?)";
         connection = getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setInt(1, data.getId());
-        preparedStatement.setString(2, data.getWord());
-        preparedStatement.setString(3, data.getHtml());
-        preparedStatement.setString(4, data.getDescription());
-        preparedStatement.setString(5, data.getPronounce());
+        preparedStatement.setString(1, data.getWord());
+        preparedStatement.setString(2, data.getHtml());
+        preparedStatement.setString(3, data.getDescription());
         preparedStatement.execute();
     }
 

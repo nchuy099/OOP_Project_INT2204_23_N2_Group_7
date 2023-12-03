@@ -74,7 +74,7 @@ public class SearchController implements Initializable {
             Word word = dictionary.getWordList().get(input);
             wordLabel.setText(word.getExpression());
             String wordHTML = word.getHtml();
-            wordInfoView.getEngine().loadContent("<html><head><style>body { color: white; }</style></head><body>" + wordHTML + "</body></html>", "text/html");
+            wordInfoView.getEngine().loadContent(wordHTML, "text/html");
         } else {
             wordInfoView.getEngine().loadContent("Word not found!");
         }
@@ -89,6 +89,7 @@ public class SearchController implements Initializable {
     @FXML
     public void showWordByClickListView() {
         String input = listView.getSelectionModel().getSelectedItem();
+        if(input == null) return;
         showWordInfoView(input);
     }
 
@@ -129,7 +130,7 @@ public class SearchController implements Initializable {
         String newHtml = editor.getHtmlText().replace(" dir=\"ltr\"", "");
         Word word = dictionary.getWordList().get(wordLabel.getText());
         word.setHtml(newHtml);
-        wordInfoView.getEngine().loadContent("<html><head><style>body { color: white; }</style></head><body>" + newHtml + "</body></html>", "text/html");
+        wordInfoView.getEngine().loadContent(newHtml, "text/html");
         DictionaryManagement.adjustWord(word, dictionary);
     }
 
