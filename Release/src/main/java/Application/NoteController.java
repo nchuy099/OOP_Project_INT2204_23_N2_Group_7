@@ -29,13 +29,13 @@ public class NoteController {
     private Button removeButton;
     private FXMLLoader editLoader;
     protected Word wordNote;
-    public void setData(Word word, FXMLLoader editLoader) {
+
+    public void setData(Word word) {
         wordNote = word;
-        this.editLoader = editLoader;
         wordView.getEngine().loadContent("" +
                 "<!DOCTYPE html>\n" +
                 "<html>\n" +
-                "<body style=\"background-color: #f0ffff;\">\n"
+                "<body style=\"background-color: #f3f3fb;\">\n"
                 + word.getHtml() +
                 "</body>\n" +
                 "</html>","text/html");
