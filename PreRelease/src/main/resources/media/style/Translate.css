@@ -1,0 +1,104 @@
+.root {
+    -fx-background-color: transparent;
+
+    -background-color-1: #080928;
+    -background-color-2: #151342;
+    -background-color-3: #20234D;
+    -background-color-4: #CF69E2;
+
+    -text-color: white;
+}
+
+#mainFromButton {
+    -fx-background-radius: 0;
+    -fx-text-fill: -background-color-1;
+    -fx-background-color: -background-color-4;
+    -fx-alignment: center;
+}
+
+#mainFromButton:hover {
+    -fx-font-size: 11;
+    -fx-background-color: #CC00FF;
+}
+
+#extraFromButton {
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-background-color: -background-color-1;
+}
+
+#extraFromButton:hover {
+    -fx-font-size: 11;
+    -fx-background-color: #20234D;
+}
+
+#fromSpeakButton {
+    -fx-background-radius: 0;
+    -fx-background-color: -background-color-1;
+    -fx-background-image: url("/media/img/normal/speaker2.png");
+    -fx-background-size: 22;
+}
+
+#fromSpeakButton:hover {
+    -fx-font-size: 11;
+    -fx-background-color: #20234D;
+}
+
+#mainToButton {
+    -fx-background-radius: 0;
+    -fx-text-fill: -background-color-1;
+    -fx-background-color: -background-color-4;
+}
+
+#mainToButton:hover {
+    -fx-font-size: 11;
+    -fx-background-color: #CC00FF;
+}
+
+#extraToButton {
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-background-color: -background-color-1;
+}
+
+#extraToButton:hover {
+    -fx-font-size: 11;
+    -fx-background-color: #20234D;
+}
+
+#toSpeakButton {
+    -fx-background-radius: 0;
+    -fx-background-color: -background-color-1;
+    -fx-background-image: url("/media/img/normal/speaker2.png");
+    -fx-background-size: 22;
+}
+
+#toSpeakButton:hover {
+    -fx-font-size: 11;
+    -fx-background-color: #20234D;
+}
+
+#translateButton2 {
+    -fx-background-color: -background-color-4;
+    -fx-alignment: center;
+    -fx-text-fill: -background-color-1;
+    -fx-font-size: 20;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-border-color: white;
+}
+
+#translateButton2:hover {
+    -fx-background-color: #CC00FF;
+}
+
+#inText {
+    -fx-text-fill: white;
+    -fx-control-inner-background: -background-color-1;
+}
+
+#outText {
+    -fx-text-fill: white;
+    -fx-control-inner-background: -background-color-1;
+}

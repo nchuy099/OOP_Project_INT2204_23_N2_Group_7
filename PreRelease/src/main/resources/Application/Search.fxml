@@ -9,20 +9,20 @@
 <?import javafx.scene.web.HTMLEditor?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane fx:id="searchMainContent" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.SearchController">
+<AnchorPane fx:id="searchMainContent" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.SearchController">
    <children>
-      <TextField fx:id="searchField" onKeyReleased="#setListView" prefHeight="40.0" prefWidth="205.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TextField fx:id="searchField" onKeyReleased="#setListView" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #080928;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
       <Button fx:id="lookUpButton" layoutX="741.0" layoutY="55.0" mnemonicParsing="false" onAction="#showWordByClickLookUpButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-background-radius: 20;" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="10.0" />
       <ListView fx:id="listView" onMouseClicked="#showWordByClickListView" prefHeight="546.0" prefWidth="205.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="51.0" />
-      <AnchorPane layoutX="404.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+      <AnchorPane layoutX="404.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #080928; -fx-background-radius: 30;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label fx:id="wordLabel" layoutX="113.0" layoutY="54.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Definition" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+            <Label fx:id="wordLabel" layoutX="113.0" layoutY="54.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Definition" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font name="System Italic" size="40.0" />
                </font>
             </Label>
             <WebView fx:id="wordInfoView" fontScale="2.0" layoutX="128.0" layoutY="170.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
-            <HTMLEditor fx:id="editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="67.0" layoutY="173.0" prefHeight="200.0" prefWidth="506.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+            <HTMLEditor fx:id="editor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="67.0" layoutY="173.0" prefHeight="200.0" prefWidth="506.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
             <Button fx:id="speaker1" layoutX="20.0" layoutY="47.0" mnemonicParsing="false" onAction="#spellingSpeaker1" prefHeight="50.0" prefWidth="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0" />
             <Button fx:id="speaker2" layoutX="77.0" layoutY="50.0" mnemonicParsing="false" onAction="#spellingSpeaker2" prefHeight="50.0" prefWidth="50.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0" />
             <Button fx:id="removeButton" layoutX="565.0" layoutY="58.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0" />
