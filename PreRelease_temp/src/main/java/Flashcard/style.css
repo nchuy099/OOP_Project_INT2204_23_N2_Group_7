@@ -1,0 +1,50 @@
+body{
+	background: none;
+}
+.box.animate .content {
+    transform: rotateX(180deg);
+    
+}
+.box {
+	width: 300px;
+	height: 300px;
+    perspective: 800px;
+}
+.content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1800ms;
+    transform-style: preserve-3d;
+}
+.front,
+.back {
+    overflow: hidden;
+    background: linear-gradient(45deg, #061de3, #e306ca);
+    font-family: Helvetica, sans-serif;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    transform: rotateX(180deg);
+}
