@@ -1,6 +1,8 @@
 package Application;
 
 import DictionaryP.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -29,7 +31,11 @@ public class CreateController {
         Word word = new Word(expression.getText().trim(), meaning.getText().trim(),
                 html.getHtmlText().trim());
         DictionaryManagement.addWordByOrder(word, dictionary);
-        MainMenuController.searchController.reset();
+        ObservableList<String> obWordList = FXCollections.observableArrayList();
+        obWordList.clear();
+        obWordList.addAll(DictionaryManagement.getKeyList(Search.getInstance()));
+        MainMenuController.searchController.listView.getItems().clear();
+        MainMenuController.searchController.listView.setItems(obWordList);
         stage.close();
     }
 

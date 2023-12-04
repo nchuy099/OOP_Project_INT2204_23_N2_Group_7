@@ -34,6 +34,7 @@ public class MainMenuController implements Initializable {
     @FXML
     private AnchorPane bookmarkPane;
     public static SearchController searchController;
+    public static BookmarkController bookmarkController;
 
     private void setMainPane(AnchorPane anchorPane) {
         mainPane.getChildren().setAll(anchorPane);
@@ -67,6 +68,7 @@ public class MainMenuController implements Initializable {
         setMainPane(bookmarkPane);
         resetButtonStyle();
         wordListButton.getStyleClass().add("active");
+        bookmarkController.reset();
     }
 
     @FXML
@@ -106,6 +108,7 @@ public class MainMenuController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Bookmark.fxml"));
             bookmarkPane = loader.load();
+            bookmarkController = loader.getController();
         } catch (Exception e) {
             e.printStackTrace();
         }

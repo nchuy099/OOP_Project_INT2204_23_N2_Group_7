@@ -43,7 +43,7 @@ public class NoteController {
     }
 
     public void markNote() throws SQLException, ClassNotFoundException {
-        DictionaryManagement.addWordInTail(wordNote, Bookmark.getInstance());
+        DictionaryManagement.addWordByOrder(wordNote, Bookmark.getInstance());
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Alert");
         alert.setHeaderText(null);

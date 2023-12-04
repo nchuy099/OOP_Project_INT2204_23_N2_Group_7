@@ -65,10 +65,12 @@ public class GeneralSearch implements Initializable {
         obWordList.clear();
         List<String> wordList = DictionaryManagement.getKeyList(dictionary);
         String input = searchField.getText().trim();
-        for (String word: wordList) {
-            if (word.length() >= input.length()
-                    && word.substring(0, input.length()).equals(input)) {
-                obWordList.add(word);
+        if(!input.isEmpty()) {
+            for (String word : wordList) {
+                if (word.length() >= input.length()
+                        && word.substring(0, input.length()).equals(input)) {
+                    obWordList.add(word);
+                }
             }
         }
         listView.setItems(obWordList);
