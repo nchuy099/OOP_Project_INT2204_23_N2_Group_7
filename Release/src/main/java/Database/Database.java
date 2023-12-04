@@ -35,7 +35,7 @@ public class Database {
         List<Data> dataList = new ArrayList<>();
         connection = getConnection();
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM " + table + " ORDER BY word ASC");
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM " + table + " ORDER BY LOWER(word) ASC");
         while (resultSet.next()) {
             Data data = new Data(resultSet.getInt("id"),
                     resultSet.getString("word"),

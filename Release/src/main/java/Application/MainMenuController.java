@@ -32,7 +32,7 @@ public class MainMenuController implements Initializable {
     @FXML
     private AnchorPane bookmarkPane;
     public static SearchController searchController;
-    public static BookmarkController bookmarkController;
+    public static WordRepositoryController bookmarkController;
 
     private void setMainPane(AnchorPane anchorPane) {
         mainPane.getChildren().setAll(anchorPane);
@@ -98,7 +98,7 @@ public class MainMenuController implements Initializable {
             e.printStackTrace();
         }
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Bookmark.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("WordRepository.fxml"));
             bookmarkPane = loader.load();
             bookmarkController = loader.getController();
         } catch (Exception e) {

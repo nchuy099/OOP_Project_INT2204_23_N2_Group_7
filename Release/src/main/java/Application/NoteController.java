@@ -10,7 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
@@ -19,16 +18,14 @@ import java.sql.SQLException;
 
 public class NoteController {
     @FXML
-    private AnchorPane pane;
+    protected AnchorPane pane;
     @FXML
     protected WebView wordView;
     @FXML
-    private Button markButton;
+    protected Button editButton;
     @FXML
-    private Button editButton;
-    @FXML
-    private Button removeButton;
-    private FXMLLoader editLoader;
+    protected Button removeButton;
+    protected FXMLLoader editLoader;
     protected Word wordNote;
 
     public void setData(Word word) {
@@ -40,15 +37,6 @@ public class NoteController {
                 + word.getHtml() +
                 "</body>\n" +
                 "</html>","text/html");
-    }
-
-    public void markNote() throws SQLException, ClassNotFoundException {
-        DictionaryManagement.addWordByOrder(wordNote, Bookmark.getInstance());
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Alert");
-        alert.setHeaderText(null);
-        alert.setContentText("Marked!");
-        alert.showAndWait();
     }
 
     public void showEditWindow() throws IOException {

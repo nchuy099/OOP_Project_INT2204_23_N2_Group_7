@@ -38,7 +38,7 @@ public class DictionaryManagement {
 
     public static void updateWord(String oldExpression, Word updatedWord,
                                   Dictionary dictionary) throws SQLException, ClassNotFoundException {
-        if (oldExpression.equals(updatedWord.getExpression())) {
+        if (oldExpression.equalsIgnoreCase(updatedWord.getExpression())) {
             int index = searchIndexById(updatedWord.getId(), oldExpression, dictionary);
             updateDatabase(dictionary, updatedWord);
             dictionary.getWordList().set(index, updatedWord);
@@ -53,7 +53,7 @@ public class DictionaryManagement {
         List<Word> wordList = new ArrayList<>();
         for (int i = firstIndex; i < dictionary.getWordList().size(); i++) {
             String iExpression = dictionary.getWordList().get(i).getExpression();
-            if (!iExpression.equals(word_expression)) break;
+            if (!iExpression.equalsIgnoreCase(word_expression)) break;
             wordList.add(dictionary.getWordList().get(i));
         }
         return wordList;
@@ -102,7 +102,7 @@ public class DictionaryManagement {
             String expression = dictionary.getWordList().get(i).getExpression();
             res.add(expression);
             while (i < dictionary.getWordList().size()
-                    && dictionary.getWordList().get(i).getExpression().equals(expression)) {
+                    && dictionary.getWordList().get(i).getExpression().equalsIgnoreCase(expression)) {
                 i++;
             }
             i--;
@@ -146,9 +146,9 @@ public class DictionaryManagement {
         int right = dictionary.getWordList().size() - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (word.equals(dictionary.getWordList().get(mid).getExpression())) {
+            if (word.equalsIgnoreCase(dictionary.getWordList().get(mid).getExpression())) {
                 return true;
-            } else if (word.compareTo(dictionary.getWordList()
+            } else if (word.compareToIgnoreCase(dictionary.getWordList()
                     .get(mid).getExpression()) < 0) {
                 right = mid - 1;
             } else {
@@ -164,10 +164,10 @@ public class DictionaryManagement {
         int right = dictionary.getWordList().size() - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (word.equals(dictionary.getWordList().get(mid).getExpression())) {
+            if (word.equalsIgnoreCase(dictionary.getWordList().get(mid).getExpression())) {
                 res = mid;
                 right = mid - 1;
-            } else if (word.compareTo(dictionary.getWordList()
+            } else if (word.compareToIgnoreCase(dictionary.getWordList()
                     .get(mid).getExpression()) < 0) {
                 right = mid - 1;
             } else {
@@ -183,10 +183,10 @@ public class DictionaryManagement {
         int right = dictionary.getWordList().size() - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (word.equals(dictionary.getWordList().get(mid).getExpression())) {
+            if (word.equalsIgnoreCase(dictionary.getWordList().get(mid).getExpression())) {
                 res = mid;
                 left = mid + 1;
-            } else if (word.compareTo(dictionary.getWordList()
+            } else if (word.compareToIgnoreCase(dictionary.getWordList()
                     .get(mid).getExpression()) < 0) {
                 right = mid - 1;
             } else {
@@ -202,19 +202,19 @@ public class DictionaryManagement {
         int right = dictionary.getWordList().size() - 1;
         while (left < right) {
             int mid = (left + right) / 2;
-            if (word.equals(dictionary.getWordList().get(mid).getExpression())) {
+            if (word.equalsIgnoreCase(dictionary.getWordList().get(mid).getExpression())) {
                 res = mid;
                 left = mid + 1;
-            } else if (word.compareTo(dictionary.getWordList()
+            } else if (word.compareToIgnoreCase(dictionary.getWordList()
                     .get(mid).getExpression()) < 0) {
                 right = mid - 1;
             } else {
                 left = mid + 1;
             }
         }
-        if (word.equals(dictionary.getWordList().get(left).getExpression())) {
+        if (word.equalsIgnoreCase(dictionary.getWordList().get(left).getExpression())) {
             res = left;
-        } else if (word.compareTo(dictionary.getWordList()
+        } else if (word.compareToIgnoreCase(dictionary.getWordList()
             .get(left).getExpression()) < 0) {
             res = left - 1;
         } else {
@@ -226,7 +226,7 @@ public class DictionaryManagement {
     public static int searchIndexById(int wordId, String wordExpression, Dictionary dictionary) {
         int index = getFirstIndex(wordExpression, dictionary);
         List<Word> wordList = dictionary.getWordList();
-        while (wordList.get(index).getExpression().equals(wordExpression)) {
+        while (wordList.get(index).getExpression().equalsIgnoreCase(wordExpression)) {
             if (wordList.get(index).getId() == wordId) {
                 return index;
             }
