@@ -89,6 +89,7 @@ public class SearchController implements Initializable {
             noteController.setData(wordList.get(i));
             wordLayout.getChildren().add(notePane);
         }
+
     }
 
     @FXML

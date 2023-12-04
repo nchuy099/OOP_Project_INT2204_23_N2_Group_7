@@ -22,6 +22,7 @@ public class EditController {
     protected TextField meaning;
     @FXML
     protected HTMLEditor html;
+    private WebView noteView;
 
     Stage stage;
 
@@ -33,6 +34,13 @@ public class EditController {
         MainMenuController.searchController.wordLabel.setText(expression.getText().trim());
         MainMenuController.searchController.setListView();
         stage.close();
+        noteView.getEngine().loadContent("" +
+                "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<body style=\"background-color: #f0ffff;\">\n"
+                + updatedWord.getHtml() +
+                "</body>\n" +
+                "</html>","text/html");
     }
 
     @FXML
@@ -40,7 +48,8 @@ public class EditController {
         stage.close();
     }
 
-    public void setData(Word wordNote) {
+    public void setData(Word wordNote, WebView noteView) {
+        this.noteView = noteView;
         this.wordNote = wordNote;
         expression.setText(wordNote.getExpression());
         meaning.setText(wordNote.getMeaning());

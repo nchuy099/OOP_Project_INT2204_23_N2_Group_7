@@ -52,12 +52,12 @@ public class NoteController {
     }
 
     public void showEditWindow() throws IOException {
-        FXMLLoader loader = editLoader;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Edit.fxml"));
         Scene scene = new Scene(loader.load());
         Stage stage = new Stage();
         EditController editController = loader.getController();
         editController.stage = stage;
-        editController.setData(wordNote);
+        editController.setData(wordNote, wordView);
         stage.setTitle("Edit");
         stage.setScene(scene);
         stage.show();
@@ -66,6 +66,11 @@ public class NoteController {
     public void removeNote() throws SQLException, ClassNotFoundException, IOException {
         DictionaryManagement.removeWord(wordNote.getId(),
                 wordNote.getExpression(), Search.getInstance());
-        MainMenuController.searchController.showWordLayout(wordNote.getExpression());
+        if (DictionaryManagement.checkInDict(wordNote.getExpression(),
+                Search.getInstance())) {
+            MainMenuController.searchController.showWordLayout(wordNote.getExpression());
+        } else {
+            MainMenuController.searchController.reset();
+        }
     }
 }
