@@ -8,6 +8,10 @@
     -fx-opacity: 0;
 }
 
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
 #wordInfoView {
     -fx-page-fill: transparent;
 }

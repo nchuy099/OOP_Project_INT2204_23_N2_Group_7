@@ -6,19 +6,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: white; -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.GameController">
+<AnchorPane prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.GameController">
    <children>
-      <Label layoutX="252.0" layoutY="40.0" text="Vocab Test">
+      <Label layoutX="252.0" layoutY="40.0" text="Vocab Test" textFill="#12004a">
          <font>
-            <Font name="Open Sans Extrabold" size="30.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="startButton" layoutX="173.0" layoutY="354.0" mnemonicParsing="false" onAction="#startGame" prefHeight="68.0" prefWidth="304.0" style="-fx-background-color: dodgerblue; -fx-background-radius: 32px;; -fx-border-radius: 32px;" text="START" textFill="WHITE">
+      <Button fx:id="startButton" layoutX="182.0" layoutY="352.0" mnemonicParsing="false" onAction="#startGame" prefHeight="68.0" prefWidth="304.0" style="-fx-background-color: #12004a; -fx-background-radius: 32px; -fx-border-radius: 32px;" text="START" textFill="WHITE">
          <font>
-            <Font name="Open Sans Semibold" size="20.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Button>
-      <TextField fx:id="questionsNumber" layoutX="250.0" layoutY="214.0" />
-      <Label layoutX="173.0" layoutY="218.0" text="Questions" />
+      <TextField fx:id="questionsNumber" layoutX="199.0" layoutY="219.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #12004a; -fx-background-radius: 10; -fx-border-radius: 10;" />
+      <Label layoutX="199.0" layoutY="188.0" prefHeight="30.0" prefWidth="98.0" text="Questions" textFill="#12004a">
+         <font>
+            <Font name="JetBrainsMono NF Medium" size="15.0" />
+         </font></Label>
    </children>
 </AnchorPane>

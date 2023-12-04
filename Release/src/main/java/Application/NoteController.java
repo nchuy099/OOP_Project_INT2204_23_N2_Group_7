@@ -36,7 +36,7 @@ public class NoteController {
         wordView.getEngine().loadContent("" +
                 "<!DOCTYPE html>\n" +
                 "<html>\n" +
-                "<body style=\"background-color: #f3f3fb;\">\n"
+                "<body style=\"background-color: #ffffff;\">\n"
                 + word.getHtml() +
                 "</body>\n" +
                 "</html>","text/html");
