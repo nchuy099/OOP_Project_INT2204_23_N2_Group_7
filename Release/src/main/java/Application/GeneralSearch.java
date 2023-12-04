@@ -52,13 +52,13 @@ public class GeneralSearch implements Initializable {
 //        listView.setItems(obWordList);
     }
 
-    public void showWarningAlert() {
+/*    public void showWarningAlert() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning");
         alert.setHeaderText(null);
         alert.setContentText("Word Not Found!");
         alert.showAndWait();
-    }
+    }*/
 
     @FXML
     public void setListView() {
@@ -76,7 +76,7 @@ public class GeneralSearch implements Initializable {
 
     public void showWordLayout(String input) throws IOException, SQLException, ClassNotFoundException {
         if (!DictionaryManagement.checkInDict(input, dictionary)) {
-            showWarningAlert();
+            wordLabel.setText("Word not found!");
             return;
         }
         wordLayout.getChildren().clear();
