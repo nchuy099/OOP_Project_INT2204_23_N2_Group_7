@@ -2,18 +2,49 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.MainMenuController">
    <children>
       <AnchorPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 30;" styleClass="searchButton" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0">
          <children>
-            <Label alignment="CENTER" layoutX="102.0" layoutY="96.0" prefHeight="178.0" prefWidth="664.0" text="WELCOME" textFill="#12004a">
+            <ImageView fitHeight="521.0" fitWidth="607.0" layoutX="190.0" layoutY="-34.0" opacity="0.42" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/img/game/wallpaper.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="117.0" layoutY="275.0" prefHeight="166.0" prefWidth="668.0" text="welcome">
                <font>
-                  <Font name="JetBrainsMono NF Medium" size="120.0" />
+                  <Font name="JetBrainsMono NF Medium" size="150.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="0.6221374191400659" endY="0.9122137377280315" startY="0.42366413669731784">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.0470588244497776" green="0.3607843220233917" blue="0.9725490212440491" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006729475100942127">
+                           <color>
+                              <Color red="0.0470588244497776" green="0.3607843220233917" blue="0.9725490212440491" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.0117647061124444" green="0.8784313797950745" blue="0.7215686440467834" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Label>
          </children></AnchorPane>
       <VBox layoutY="380.0" prefHeight="80.0" prefWidth="80.0" AnchorPane.bottomAnchor="20.0" />

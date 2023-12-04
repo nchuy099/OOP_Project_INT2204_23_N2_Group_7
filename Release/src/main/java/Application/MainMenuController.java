@@ -104,7 +104,7 @@ public class MainMenuController implements Initializable {
             e.printStackTrace();
         }
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Flashcard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Bookmark.fxml"));
             bookmarkPane = loader.load();
         } catch (Exception e) {
             e.printStackTrace();

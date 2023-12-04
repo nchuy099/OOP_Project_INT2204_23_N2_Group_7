@@ -1,13 +1,3 @@
-.root {
-    -fx-background-color: #080928;
-
-    -background-color-1: #080928;
-    -background-color-2: #151342;
-    -background-color-3: #20234D;
-
-    -text-color: white;
-}
-
 .list-cell {
     -fx-background-color: transparent;
     -fx-text-fill: black;
