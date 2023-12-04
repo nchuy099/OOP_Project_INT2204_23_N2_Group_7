@@ -13,7 +13,7 @@ public class Bookmark extends Dictionary {
     public static Bookmark getInstance() throws SQLException, ClassNotFoundException {
         if (instance == null) {
             instance = new Bookmark(dbTable);
-            DictionaryManagement.importFromDatabase(instance);
+            DictionaryManagement.importSortedFromDatabase(instance);
         }
         return instance;
     }
