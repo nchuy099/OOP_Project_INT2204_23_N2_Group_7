@@ -81,7 +81,7 @@ public class BookmarkController implements Initializable {
         }
         wordLayout.getChildren().clear();
         wordLabel.setText(input);
-        List<Word> wordList = DictionaryManagement.lookUpWord(input, Search.getInstance());
+        List<Word> wordList = DictionaryManagement.lookUpWord(input, Bookmark.getInstance());
         for (int i = 0; i < wordList.size(); i++) {
             FXMLLoader noteLoader = new FXMLLoader(getClass().getResource("Note.fxml"));
             AnchorPane notePane = noteLoader.load();
@@ -100,6 +100,9 @@ public class BookmarkController implements Initializable {
     @FXML
     public void showWordLayoutByClickListView() throws IOException, SQLException, ClassNotFoundException {
         String input = listView.getSelectionModel().getSelectedItem();
+        if (input.isEmpty()) {
+            return;
+        }
         showWordLayout(input);
     }
 
