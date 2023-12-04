@@ -110,6 +110,6 @@ public class MainMenuController implements Initializable {
             e.printStackTrace();
         }
 
-        //setMainPane(searchPane);
+        setMainPane(searchPane);
     }
 }
