@@ -56,7 +56,7 @@ public class SearchController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning");
         alert.setHeaderText(null);
-        alert.setContentText("No Word Selection!");
+        alert.setContentText("Word Not Found!");
         alert.showAndWait();
     }
 
@@ -75,7 +75,7 @@ public class SearchController implements Initializable {
     }
 
     public void showWordLayout(String input) throws IOException, SQLException, ClassNotFoundException {
-        if (input.isEmpty()) {
+        if (!DictionaryManagement.checkInDict(input, dictionary)) {
             showWarningAlert();
             return;
         }
