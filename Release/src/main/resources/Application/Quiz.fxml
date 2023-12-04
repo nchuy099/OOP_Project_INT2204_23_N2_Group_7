@@ -5,29 +5,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: #F3F3Fb; -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.QuizController">
+<AnchorPane prefHeight="570.0" prefWidth="1010.0" style="-fx-background-color: #F3F3Fb; -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.QuizController">
    <children>
-      <Label fx:id="question" alignment="CENTER" layoutX="94.0" layoutY="58.0" prefHeight="130.0" prefWidth="490.0" style="-fx-border-color: #12004a; -fx-background-color: white; -fx-border-width: 3; -fx-background-radius: 30; -fx-border-radius: 30;" text="1. How many consonants are there in the English Alphabets?" textAlignment="CENTER" textFill="#12004a" wrapText="true" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="50.0">
+      <Label fx:id="question" alignment="CENTER" layoutX="80.0" layoutY="41.0" prefHeight="177.0" prefWidth="860.0" style="-fx-border-color: #12004a; -fx-background-color: white; -fx-border-width: 3; -fx-background-radius: 30; -fx-border-radius: 30;" text="1. How many consonants are there in the English Alphabets?" textAlignment="CENTER" textFill="#12004a" wrapText="true" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="41.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="opt1" layoutX="43.0" layoutY="250.0" mnemonicParsing="false" onAction="#chooseOpt1" prefHeight="57.0" prefWidth="236.0" style="-fx-background-color: #12004a; -fx-background-radius: 30;" text="Button" textFill="WHITE">
+      <Button fx:id="opt1" layoutX="80.0" layoutY="313.0" mnemonicParsing="false" onAction="#chooseOpt1" prefHeight="100.0" prefWidth="340.0" style="-fx-background-color: #12004a; -fx-background-radius: 30;" text="Button" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button id="opt3" fx:id="opt3" layoutX="43.0" layoutY="373.0" mnemonicParsing="false" onAction="#chooseOpt3" prefHeight="57.0" prefWidth="236.0" style="-fx-background-color: #12004a; -fx-background-radius: 30;" text="Button" textFill="WHITE">
+      <Button id="opt3" fx:id="opt3" layoutX="80.0" layoutY="446.0" mnemonicParsing="false" onAction="#chooseOpt3" prefHeight="100.0" prefWidth="340.0" style="-fx-background-color: #12004a; -fx-background-radius: 30;" text="Button" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button id="opt4" fx:id="opt4" layoutX="374.0" layoutY="373.0" mnemonicParsing="false" onAction="#chooseOpt4" prefHeight="57.0" prefWidth="236.0" style="-fx-background-color: #12004a; -fx-background-radius: 30;" text="Button" textFill="WHITE">
+      <Button id="opt4" fx:id="opt4" layoutX="590.0" layoutY="446.0" mnemonicParsing="false" onAction="#chooseOpt4" prefHeight="100.0" prefWidth="340.0" style="-fx-background-color: #12004a; -fx-background-radius: 30;" text="Button" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button id="opt2" fx:id="opt2" layoutX="374.0" layoutY="250.0" mnemonicParsing="false" onAction="#chooseOpt2" prefHeight="57.0" prefWidth="236.0" style="-fx-background-color: #12004a; -fx-background-radius: 30;" text="Button" textFill="WHITE">
+      <Button id="opt2" fx:id="opt2" layoutX="590.0" layoutY="313.0" mnemonicParsing="false" onAction="#chooseOpt2" prefHeight="100.0" prefWidth="340.0" style="-fx-background-color: #12004a; -fx-background-radius: 30;" text="Button" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>

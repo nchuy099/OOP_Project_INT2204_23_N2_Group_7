@@ -74,11 +74,3 @@
     -fx-background-image: url("/media/img/active/game.png");
 }
 
-#settingButton {
-    -fx-background-image: url("/media/img/normal/setting.png");
-}
-
-#settingButton.active {
-    -fx-background-image: url("/media/img/active/setting.png");
-}
-

@@ -24,8 +24,6 @@ public class MainMenuController implements Initializable {
     @FXML
     private Button gameMenuButton;
     @FXML
-    private Button settingButton;
-    @FXML
     private AnchorPane mainPane;
     @FXML
     private AnchorPane searchPane;
@@ -45,7 +43,6 @@ public class MainMenuController implements Initializable {
         translateButton.getStyleClass().removeAll("active");
         wordListButton.getStyleClass().removeAll("active");
         gameMenuButton.getStyleClass().removeAll("active");
-        settingButton.getStyleClass().removeAll("active");
     }
 
     @FXML
@@ -80,11 +77,6 @@ public class MainMenuController implements Initializable {
         stage.show();
     }
 
-    @FXML
-    public void showSettingPane(ActionEvent event){
-        resetButtonStyle();
-        settingButton.getStyleClass().add("active");
-    }
 
 
     @Override
