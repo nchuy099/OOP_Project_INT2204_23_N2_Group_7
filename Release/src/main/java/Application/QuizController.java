@@ -100,6 +100,7 @@ public class QuizController extends GameController implements Initializable {
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Result.fxml"));
             Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/media/style/Main.css").toExternalForm());
             ResultController resultController = loader.getController();
             stage.setScene(scene);
             stage.show();

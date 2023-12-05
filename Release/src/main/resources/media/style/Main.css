@@ -82,3 +82,28 @@
     -fx-background-image: url("/media/img/active/setting.png");
 }
 
+#replayButton {
+    -fx-background-image: url("/media/img/normal/replay.png");
+    -fx-text-fill: #12004a;
+    -fx-background-size: 110;
+    -fx-font-size: 20;
+}
+
+#replayButton:hover {
+    -fx-background-size: 130;
+    -fx-text-fill: transparent;
+}
+
+#mainMenuButton {
+    -fx-background-image: url("/media/img/normal/exit.png");
+    -fx-text-fill: #12004a;
+    -fx-background-size: 110;
+    -fx-font-size: 20;
+}
+
+#mainMenuButton:hover {
+    -fx-background-size: 130;
+    -fx-text-fill: transparent;
+}
+
+

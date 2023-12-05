@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="570.0" prefWidth="1010.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.ResultController">
+<AnchorPane prefHeight="570.0" prefWidth="1010.0" style="-fx-background-color: white; -fx-background-radius: 32px; -fx-border-radius: 32px;" stylesheets="@../media/style/Main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.ResultController">
    <children>
-      <Label fx:id="remark" layoutX="93.0" layoutY="64.0" prefHeight="118.0" prefWidth="838.0" text="Keep it up! You’re on your way to acing your material." textFill="#12004a" wrapText="true">
+      <Label fx:id="remark" alignment="CENTER" layoutX="93.0" layoutY="64.0" prefHeight="118.0" prefWidth="838.0" text="Keep it up! You’re on your way to acing your material." textFill="#12004a" wrapText="true">
          <font>
             <Font name="System Bold Italic" size="32.0" />
          </font>
@@ -29,8 +29,14 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Button fx:id="replayButton" layoutX="690.0" layoutY="182.0" mnemonicParsing="false" onAction="#replay" prefHeight="139.0" prefWidth="163.0" text="Replay" />
-      <Button fx:id="mainMenuButton" layoutX="690.0" layoutY="348.0" mnemonicParsing="false" onAction="#backToMainMenu" prefHeight="139.0" prefWidth="163.0" text="Back to Main Menu" />
+      <Button fx:id="replayButton" alignment="BOTTOM_CENTER" layoutX="690.0" layoutY="182.0" mnemonicParsing="false" onAction="#replay" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 50; -fx-border-color: #12004a; -fx-border-radius: 50;" stylesheets="@../media/style/Main.css" text="Replay" textFill="#12004a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="mainMenuButton" alignment="BOTTOM_CENTER" layoutX="690.0" layoutY="348.0" mnemonicParsing="false" onAction="#backToMainMenu" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #12004a;" text="Exit" textFill="#12004a" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
       <Label layoutX="403.0" layoutY="282.0" text="CORRECT:" textFill="GREEN">
          <font>
             <Font name="System Bold" size="28.0" />
