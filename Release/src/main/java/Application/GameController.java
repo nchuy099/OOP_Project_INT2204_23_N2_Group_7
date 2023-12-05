@@ -25,8 +25,6 @@ public class GameController {
     private Button startButton;
 
     public void startGame (ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
-        if (questionsNumber.getText().trim().isEmpty() || Integer.parseInt(questionsNumber.getText().trim())
-                > Bookmark.getInstance().getWordList().size()) return;
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Quiz.fxml"));
         Scene scene = new Scene(loader.load());
