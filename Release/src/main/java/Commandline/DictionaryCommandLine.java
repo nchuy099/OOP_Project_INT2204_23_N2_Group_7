@@ -68,7 +68,7 @@ public class DictionaryCommandLine {
         for (int i = 0; i < dictionary.getWordList().size(); i++) {
             String cur = dictionary.getWordList().get(i).getExpression();
             String meaning = "";
-            while (dictionary.getWordList().get(i).getExpression().equals(cur)) {
+            while (i < dictionary.getWordList().size() && dictionary.getWordList().get(i).getExpression().equals(cur)) {
                 meaning += dictionary.getWordList().get(i).getMeaning() + "\n";
                 i++;
             }
