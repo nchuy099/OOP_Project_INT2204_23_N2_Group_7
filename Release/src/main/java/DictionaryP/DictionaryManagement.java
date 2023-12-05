@@ -12,10 +12,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class DictionaryManagement {
-    public static void addWordInTail(Word newWord, Dictionary dictionary) throws SQLException, ClassNotFoundException {
-        dictionary.getWordList().add(newWord);
-        insertIntoDatabase(dictionary, newWord);
-    }
 
     public static void addWordByOrder(Word newWord, Dictionary dictionary) throws SQLException, ClassNotFoundException {
         insertIntoDatabase(dictionary, newWord);
@@ -111,14 +107,6 @@ public class DictionaryManagement {
     }
 
     public static void importFromDatabase(Dictionary dictionary) throws SQLException, ClassNotFoundException {
-        List<Data> dataList = Database.selectFromTable(dictionary.getDbTable());
-        for (Data data: dataList) {
-            dictionary.getWordList().add(new Word(data.getId(),
-                    data.getWord(), data.getDescription(), data.getHtml()));
-        }
-    }
-
-    public static void importSortedFromDatabase(Dictionary dictionary) throws SQLException, ClassNotFoundException {
         List<Data> dataList = Database.selectFromTableOrderByWord(dictionary.getDbTable());
         for (Data data: dataList) {
             dictionary.getWordList().add(new Word(data.getId(),
