@@ -39,7 +39,7 @@ public class NoteController {
         Scene scene = new Scene(loader.load());
         Stage stage = new Stage();
         EditController editController = loader.getController();
-        editController.stage = stage;
+        editController.setStage(stage);
         editController.setData(wordNote, wordView);
         stage.setTitle("Edit");
         stage.setScene(scene);

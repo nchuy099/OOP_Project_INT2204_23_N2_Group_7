@@ -24,7 +24,7 @@ public class EditController {
     protected HTMLEditor html;
     protected WebView noteView;
 
-    Stage stage;
+    private Stage stage;
 
     @FXML
     public void saveWord() throws SQLException, ClassNotFoundException {
@@ -46,6 +46,10 @@ public class EditController {
     @FXML
     public void cancelAction() {
         stage.close();
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
     }
 
     public void setData(Word wordNote, WebView noteView) {
