@@ -19,7 +19,7 @@
       <ListView fx:id="listView" onMouseClicked="#showWordLayoutByClickListView" prefHeight="546.0" prefWidth="205.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="51.0" />
       <AnchorPane layoutX="404.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label fx:id="wordLabel" layoutX="113.0" layoutY="54.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Definition" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+            <Label fx:id="wordLabel" layoutX="113.0" layoutY="54.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="word" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font name="JetBrainsMono NF Medium" size="40.0" />
                </font>

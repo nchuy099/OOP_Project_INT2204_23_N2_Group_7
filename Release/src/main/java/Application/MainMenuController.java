@@ -16,6 +16,8 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
     @FXML
+    private Stage stage;
+    @FXML
     private Button searchButton;
     @FXML
     private Button translateButton;

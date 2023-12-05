@@ -24,7 +24,6 @@ public class SearchController extends WordRepositoryController implements Initia
         listView.getItems().clear();
         // init components
         wordLayout.getChildren().clear();
-        showWordLayout("definition");
         // set listView
 //        obWordList.addAll(DictionaryManagement.getKeyList(dictionary));
 //        listView.setItems(obWordList);
