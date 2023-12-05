@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -26,7 +27,16 @@ public class GameController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Quiz.fxml"));
         Scene scene = new Scene(loader.load());
         QuizController quizController = loader.getController();
-        quizController.setData(Integer.parseInt(questionsNumber.getText().trim()));
+        try {
+            quizController.setData(Integer.parseInt(questionsNumber.getText().trim()));
+        }catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText(null);
+            alert.setContentText("Nhập số từ bạn muốn luyện tập!");
+            alert.showAndWait();
+            return;
+        }
         stage.setScene(scene);
         stage.show();
     }

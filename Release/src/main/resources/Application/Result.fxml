@@ -29,11 +29,11 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Button fx:id="replayButton" alignment="BOTTOM_CENTER" layoutX="690.0" layoutY="182.0" mnemonicParsing="false" onAction="#replay" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 50; -fx-border-color: #12004a; -fx-border-radius: 50;" stylesheets="@../media/style/Main.css" text="Replay" textFill="#12004a">
+      <Button fx:id="replayButton" alignment="BOTTOM_CENTER" layoutX="690.0" layoutY="182.0" mnemonicParsing="false" onAction="#replay" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 50; -fx-border-color: #12004a; -fx-border-radius: 50; -fx-border-width: 3;" stylesheets="@../media/style/Main.css" text="Replay" textFill="#12004a">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
-      <Button fx:id="mainMenuButton" alignment="BOTTOM_CENTER" layoutX="690.0" layoutY="348.0" mnemonicParsing="false" onAction="#backToMainMenu" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #12004a;" text="Exit" textFill="#12004a" wrapText="true">
+      <Button fx:id="mainMenuButton" alignment="BOTTOM_CENTER" layoutX="690.0" layoutY="348.0" mnemonicParsing="false" onAction="#backToMainMenu" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #12004a; -fx-border-width: 3;" text="Exit" textFill="#12004a" wrapText="true">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
