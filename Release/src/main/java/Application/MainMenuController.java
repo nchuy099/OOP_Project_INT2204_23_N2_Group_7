@@ -24,6 +24,8 @@ public class MainMenuController implements Initializable {
     @FXML
     private Button gameMenuButton;
     @FXML
+    private Button settingButton;
+    @FXML
     private AnchorPane mainPane;
     @FXML
     private AnchorPane searchPane;
@@ -31,8 +33,11 @@ public class MainMenuController implements Initializable {
     private AnchorPane translatePane;
     @FXML
     private AnchorPane bookmarkPane;
+    @FXML
+    private AnchorPane settingPane;
     public static SearchController searchController;
     public static WordRepositoryController bookmarkController;
+    public static SettingController settingController;
 
     private void setMainPane(AnchorPane anchorPane) {
         mainPane.getChildren().setAll(anchorPane);
@@ -46,7 +51,7 @@ public class MainMenuController implements Initializable {
     }
 
     @FXML
-    public void showSearchPane() {
+    public void showSearchPane() throws SQLException, IOException, ClassNotFoundException {
         setMainPane(searchPane);
         resetButtonStyle();
         searchButton.getStyleClass().add("active");
@@ -61,7 +66,7 @@ public class MainMenuController implements Initializable {
     }
 
     @FXML
-    public void showBookmarkPane() {
+    public void showBookmarkPane() throws SQLException, IOException, ClassNotFoundException {
         setMainPane(bookmarkPane);
         resetButtonStyle();
         wordListButton.getStyleClass().add("active");
@@ -77,13 +82,17 @@ public class MainMenuController implements Initializable {
         stage.show();
     }
 
+    @FXML
+    public void showSettingPane(ActionEvent event) {
+        setMainPane(settingPane);
+        resetButtonStyle();
+        settingButton.getStyleClass().add("active");
+    }
+
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        // Load scenes from fxml files
-
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Search.fxml"));
             searchPane = loader.load();
@@ -104,7 +113,22 @@ public class MainMenuController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Setting.fxml"));
+            settingPane = loader.load();
+            settingController = loader.getController();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        setMainPane(searchPane);
+        try {
+            showSearchPane();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -25,6 +25,10 @@ public class VoiceRSS {
     public static String englishUK = "en-gb";
     public static double speed = 1;
 
+    public static void setSpeed(double s) {
+        speed = s;
+    }
+
     public static void speakWord(String word, String language) throws Exception {
         // Set audio properties
         VoiceProvider tts = new VoiceProvider(API_KEY);
@@ -54,10 +58,6 @@ public class VoiceRSS {
         Clip clip = AudioSystem.getClip();
         clip.open(audioInputStream);
         clip.start();
-    }
-
-    public static void main(String[] args) throws Exception {
-        speakWord("hello how are you i'm fine thank you and you", englishUK);
     }
 }
 

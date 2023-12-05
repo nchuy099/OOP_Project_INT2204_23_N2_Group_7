@@ -17,6 +17,19 @@ import java.util.ResourceBundle;
 
 public class SearchController extends WordRepositoryController implements Initializable {
 
+    public void reset() throws SQLException, IOException, ClassNotFoundException {
+        // clear all info
+        obWordList.clear();
+        searchField.clear();
+        listView.getItems().clear();
+        // init components
+        wordLayout.getChildren().clear();
+        showWordLayout("definition");
+        // set listView
+//        obWordList.addAll(DictionaryManagement.getKeyList(dictionary));
+//        listView.setItems(obWordList);
+    }
+
     @FXML
     public void showCreatePane() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Create.fxml"));

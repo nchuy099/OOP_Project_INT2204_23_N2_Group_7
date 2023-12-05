@@ -22,7 +22,7 @@
 #fromSpeakButton {
     -fx-background-radius: 0;
     -fx-background-color: white;
-    -fx-background-image: url("/icon/normal/speaker2.png");
+    -fx-background-image: url("/media/img/normal/speaker.png");
     -fx-background-size: 22;
 }
 
@@ -55,7 +55,7 @@
 #toSpeakButton {
     -fx-background-radius: 0;
     -fx-background-color: white;
-    -fx-background-image: url("/icon/normal/speaker2.png");
+    -fx-background-image: url("/media/img/normal/speaker.png");
     -fx-background-size: 22;
 }
 

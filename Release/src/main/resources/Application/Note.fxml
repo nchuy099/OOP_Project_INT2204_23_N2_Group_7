@@ -7,7 +7,7 @@
 <AnchorPane fx:id="pane" minHeight="420.0" prefHeight="420.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.NoteController">
    <children>
       <WebView fx:id="wordView" minHeight="-1.0" minWidth="-1.0" prefHeight="420.0" prefWidth="655.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Button fx:id="editButton" layoutX="580.0" layoutY="142.0" mnemonicParsing="false" onAction="#showEditWindow" prefHeight="50.0" prefWidth="50.0" AnchorPane.rightAnchor="24.600000000000023" AnchorPane.topAnchor="142.0" />
-      <Button fx:id="removeButton" layoutX="580.0" layoutY="193.0" mnemonicParsing="false" onAction="#removeNote" prefHeight="50.0" prefWidth="50.0" AnchorPane.rightAnchor="24.600000000000023" AnchorPane.topAnchor="193.0" />
+      <Button fx:id="editButton" layoutX="580.0" layoutY="142.0" mnemonicParsing="false" onAction="#showEditWindow" prefHeight="50.0" prefWidth="50.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0" />
+      <Button fx:id="removeButton" layoutX="580.0" layoutY="193.0" mnemonicParsing="false" onAction="#removeNote" prefHeight="50.0" prefWidth="50.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="60.0" />
    </children>
 </AnchorPane>

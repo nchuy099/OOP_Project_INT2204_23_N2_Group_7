@@ -32,7 +32,7 @@ public class WordRepositoryController implements Initializable {
     protected VBox wordLayout;
     protected Dictionary dictionary;
 
-    public void reset() {
+    public void reset() throws SQLException, IOException, ClassNotFoundException {
         // clear all info
         obWordList.clear();
         searchField.clear();
@@ -41,8 +41,8 @@ public class WordRepositoryController implements Initializable {
         wordLayout.getChildren().clear();
         wordLabel.setText("Word");
         // set listView
-//        obWordList.addAll(DictionaryManagement.getKeyList(dictionary));
-//        listView.setItems(obWordList);
+        obWordList.addAll(DictionaryManagement.getKeyList(dictionary));
+        listView.setItems(obWordList);
     }
 
 /*    public void showWarningAlert() {
@@ -102,11 +102,11 @@ public class WordRepositoryController implements Initializable {
     }
 
     public void spellingSpeaker1() throws Exception {
-        VoiceRSS.speakWord(wordLabel.getText(), VoiceRSS.englishUK);
+        VoiceRSS.speakWord(wordLabel.getText(), VoiceRSS.englishUS);
     }
 
     public void spellingSpeaker2() throws Exception {
-        VoiceRSS.speakWord(wordLabel.getText(), VoiceRSS.englishUS);
+        VoiceRSS.speakWord(wordLabel.getText(), VoiceRSS.englishUK);
     }
 
 
@@ -118,7 +118,15 @@ public class WordRepositoryController implements Initializable {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        reset();
+        try {
+            reset();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
