@@ -17,6 +17,7 @@ import java.util.ResourceBundle;
 
 public class SearchController extends WordRepositoryController implements Initializable {
 
+    @Override
     public void reset() throws SQLException, IOException, ClassNotFoundException {
         // clear all info
         obWordList.clear();
@@ -41,7 +42,7 @@ public class SearchController extends WordRepositoryController implements Initia
         stage.show();
     }
 
-    @Override
+    @Override @FXML
     public void showWordLayout(String input) throws IOException, SQLException, ClassNotFoundException {
         if (!DictionaryManagement.checkInDict(input, dictionary)) {
             wordLabel.setText("Word not found!");
