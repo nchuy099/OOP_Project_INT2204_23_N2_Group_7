@@ -1,5 +1,6 @@
 package Application;
 
+import DictionaryP.Bookmark;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class GameController {
@@ -21,7 +23,9 @@ public class GameController {
     @FXML
     private Button startButton;
 
-    public void startGame (ActionEvent event) throws IOException {
+    public void startGame (ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
+        if (questionsNumber.getText().trim().isEmpty() || Integer.parseInt(questionsNumber.getText().trim())
+                > Bookmark.getInstance().getWordList().size()) return;
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Quiz.fxml"));
         Scene scene = new Scene(loader.load());
