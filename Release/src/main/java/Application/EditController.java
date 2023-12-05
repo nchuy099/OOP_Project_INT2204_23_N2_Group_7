@@ -22,7 +22,7 @@ public class EditController {
     protected TextField meaning;
     @FXML
     protected HTMLEditor html;
-    private WebView noteView;
+    protected WebView noteView;
 
     Stage stage;
 

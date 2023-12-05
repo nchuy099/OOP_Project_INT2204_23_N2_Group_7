@@ -15,16 +15,13 @@ import java.sql.SQLException;
 
 public class NoteController {
     @FXML
-    protected AnchorPane pane;
-    @FXML
     protected WebView wordView;
     @FXML
     protected Button editButton;
     @FXML
     protected Button removeButton;
-    protected FXMLLoader editLoader;
     protected Word wordNote;
-    protected Dictionary dictionary;
+
 
     public void setData(Word word) {
         wordNote = word;
