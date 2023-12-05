@@ -16,8 +16,6 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
     @FXML
-    private Stage stage;
-    @FXML
     private Button searchButton;
     @FXML
     private Button translateButton;
@@ -39,7 +37,6 @@ public class MainMenuController implements Initializable {
     private AnchorPane settingPane;
     public static SearchController searchController;
     public static WordRepositoryController bookmarkController;
-    public static SettingController settingController;
 
     private void setMainPane(AnchorPane anchorPane) {
         mainPane.getChildren().setAll(anchorPane);
@@ -118,7 +115,6 @@ public class MainMenuController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Setting.fxml"));
             settingPane = loader.load();
-            settingController = loader.getController();
         } catch (Exception e) {
             e.printStackTrace();
         }

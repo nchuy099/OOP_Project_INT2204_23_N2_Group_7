@@ -23,7 +23,7 @@ public class CreateController {
     @FXML
     protected HTMLEditor html;
 
-    Stage stage;
+    private Stage stage;
 
     @FXML
     public void createNewWord() throws SQLException, ClassNotFoundException {
@@ -42,6 +42,10 @@ public class CreateController {
     @FXML
     public void cancelAction() {
         stage.close();
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
     }
 
 }
