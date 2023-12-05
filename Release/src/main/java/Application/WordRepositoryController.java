@@ -72,6 +72,7 @@ public class WordRepositoryController implements Initializable {
     public void showWordLayout(String input) throws IOException, SQLException, ClassNotFoundException {
         if (!DictionaryManagement.checkInDict(input, dictionary)) {
             wordLabel.setText("Word not found!");
+            wordLayout.getChildren().clear();
             return;
         }
         wordLayout.getChildren().clear();

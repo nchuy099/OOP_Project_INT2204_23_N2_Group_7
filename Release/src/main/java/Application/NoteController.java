@@ -1,9 +1,6 @@
 package Application;
 
-import DictionaryP.Bookmark;
-import DictionaryP.DictionaryManagement;
-import DictionaryP.Search;
-import DictionaryP.Word;
+import DictionaryP.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -27,6 +24,7 @@ public class NoteController {
     protected Button removeButton;
     protected FXMLLoader editLoader;
     protected Word wordNote;
+    protected Dictionary dictionary;
 
     public void setData(Word word) {
         wordNote = word;
@@ -53,12 +51,13 @@ public class NoteController {
 
     public void removeNote() throws SQLException, ClassNotFoundException, IOException {
         DictionaryManagement.removeWord(wordNote.getId(),
-                wordNote.getExpression(), Search.getInstance());
+                wordNote.getExpression(), Bookmark.getInstance());
         if (DictionaryManagement.checkInDict(wordNote.getExpression(),
-                Search.getInstance())) {
-            MainMenuController.searchController.showWordLayout(wordNote.getExpression());
+                Bookmark.getInstance())) {
+            MainMenuController.bookmarkController.showWordLayout(wordNote.getExpression());
         } else {
-            MainMenuController.searchController.reset();
+            MainMenuController.bookmarkController.reset();
         }
     }
+
 }

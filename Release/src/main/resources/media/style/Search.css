@@ -49,6 +49,10 @@
     -fx-background-image: url("/media/img/normal/save.png");
 }
 
+#markButton.active {
+    -fx-background-image: url("/media/img/active/save.png");
+}
+
 #speaker1 {
     -fx-background-image: url("/media/img/normal/speaker1.png");
 }

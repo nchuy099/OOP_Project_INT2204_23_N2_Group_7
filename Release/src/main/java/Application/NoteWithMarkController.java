@@ -28,4 +28,16 @@ public class NoteWithMarkController extends NoteController{
         alert.showAndWait();
     }
 
+    @Override
+    public void removeNote() throws SQLException, ClassNotFoundException, IOException {
+        DictionaryManagement.removeWord(wordNote.getId(),
+                wordNote.getExpression(), Search.getInstance());
+        if (DictionaryManagement.checkInDict(wordNote.getExpression(),
+                Bookmark.getInstance())) {
+            MainMenuController.searchController.showWordLayout(wordNote.getExpression());
+        } else {
+            MainMenuController.searchController.reset();
+        }
+    }
+
 }
