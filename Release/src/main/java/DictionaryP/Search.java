@@ -3,7 +3,7 @@ package DictionaryP;
 import java.sql.SQLException;
 
 public class Search extends Dictionary {
-    public static final String dbTable = "search";
+    private static final String sTableName = "search";
     private static Search instance = null;
 
     private Search(String dbTable) {
@@ -12,8 +12,8 @@ public class Search extends Dictionary {
 
     public static Search getInstance() throws SQLException, ClassNotFoundException {
         if (instance == null) {
-            instance = new Search(dbTable);
-            DictionaryManagement.importSortedFromDatabase(instance);
+            instance = new Search(sTableName);
+            DictionaryManagement.importFromDatabase(instance);
         }
         return instance;
     }

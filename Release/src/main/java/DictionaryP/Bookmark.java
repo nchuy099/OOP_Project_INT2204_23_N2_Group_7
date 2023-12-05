@@ -3,7 +3,7 @@ package DictionaryP;
 import java.sql.SQLException;
 
 public class Bookmark extends Dictionary {
-    public static final String dbTable = "bookmark";
+    public static final String bmTableName = "bookmark";
     private static Bookmark instance = null;
 
     private Bookmark(String dbTable) {
@@ -12,8 +12,8 @@ public class Bookmark extends Dictionary {
 
     public static Bookmark getInstance() throws SQLException, ClassNotFoundException {
         if (instance == null) {
-            instance = new Bookmark(dbTable);
-            DictionaryManagement.importSortedFromDatabase(instance);
+            instance = new Bookmark(bmTableName);
+            DictionaryManagement.importFromDatabase(instance);
         }
         return instance;
     }
