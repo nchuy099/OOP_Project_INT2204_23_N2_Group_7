@@ -36,7 +36,7 @@ public class SearchController extends WordRepositoryController implements Initia
         Scene scene = new Scene(loader.load());
         Stage stage = new Stage();
         CreateController createController = loader.getController();
-        createController.stage = stage;
+        createController.setStage(stage);
         stage.setTitle("Create");
         stage.setScene(scene);
         stage.show();
