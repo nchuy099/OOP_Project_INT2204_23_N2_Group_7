@@ -1,4 +1,4 @@
-package Application;
+package Controllers;
 
 import Game.Quiz;
 import javafx.event.ActionEvent;

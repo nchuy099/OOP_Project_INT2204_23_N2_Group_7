@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: #f3f3fb;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.SettingController">
+<AnchorPane prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: #f3f3fb;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SettingController">
    <children>
       <ChoiceBox fx:id="speedChoice" layoutX="279.0" layoutY="27.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white; -fx-border-color: #12004a; -fx-background-radius: 10; -fx-border-radius: 10;" />
       <Label layoutX="31.0" layoutY="70.0" prefHeight="54.0" prefWidth="273.0" text="Tốc độ nói:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">

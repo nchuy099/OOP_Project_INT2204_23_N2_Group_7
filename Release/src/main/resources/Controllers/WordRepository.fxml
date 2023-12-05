@@ -12,14 +12,14 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="searchMainContent" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.SearchController">
+<AnchorPane fx:id="searchMainContent" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.WordRepositoryController">
    <children>
       <TextField fx:id="searchField" onKeyReleased="#setListView" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
       <Button fx:id="lookUpButton" layoutX="741.0" layoutY="55.0" mnemonicParsing="false" onAction="#showWordLayoutByClickLookUpButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-background-radius: 20;" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="10.0" />
       <ListView fx:id="listView" onMouseClicked="#showWordLayoutByClickListView" prefHeight="546.0" prefWidth="205.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="51.0" />
       <AnchorPane layoutX="404.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label fx:id="wordLabel" layoutX="113.0" layoutY="54.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="word" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+            <Label fx:id="wordLabel" layoutX="113.0" layoutY="54.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Definition" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font name="JetBrainsMono NF Medium" size="40.0" />
                </font>
@@ -40,20 +40,14 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <Button fx:id="speaker1" layoutX="20.0" layoutY="47.0" mnemonicParsing="false" onAction="#spellingSpeaker1" prefHeight="50.0" prefWidth="50.0" textFill="#12004a" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0">
-               <font>
-                  <Font name="System Bold Italic" size="13.600000381469727" />
-               </font></Button>
-            <Button fx:id="speaker2" layoutX="95.0" layoutY="50.0" mnemonicParsing="false" onAction="#spellingSpeaker2" prefHeight="50.0" prefWidth="50.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="50.0">
-               <font>
-                  <Font name="System Bold Italic" size="13.600000381469727" />
-               </font></Button>
-            <Button fx:id="addButton" layoutX="371.0" layoutY="38.0" mnemonicParsing="false" onAction="#showCreatePane" prefHeight="50.0" prefWidth="50.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0" />
+            <Button fx:id="speaker1" layoutX="20.0" layoutY="47.0" mnemonicParsing="false" onAction="#spellingSpeaker1" prefHeight="50.0" prefWidth="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0" />
+            <Button fx:id="speaker2" layoutX="77.0" layoutY="50.0" mnemonicParsing="false" onAction="#spellingSpeaker2" prefHeight="50.0" prefWidth="50.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="50.0" />
             <ScrollPane layoutX="170.0" layoutY="182.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-page-fill: red;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
                <content>
                   <VBox fx:id="wordLayout" prefHeight="420.0" prefWidth="655.0" style="-fx-background-color: transparent;" />
                </content>
             </ScrollPane>
-         </children></AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

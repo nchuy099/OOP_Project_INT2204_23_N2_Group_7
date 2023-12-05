@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="570.0" prefWidth="1010.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.GameController">
+<AnchorPane prefHeight="570.0" prefWidth="1010.0" style="-fx-background-color: #f3f3fb; -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GameController">
    <children>
       <Label layoutX="411.0" layoutY="69.0" text="Vocab Test" textFill="#12004a">
          <font>

@@ -1,4 +1,4 @@
-package Application;
+package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,6 +37,7 @@ public class MainMenuController implements Initializable {
     private AnchorPane settingPane;
     public static SearchController searchController;
     public static WordRepositoryController bookmarkController;
+
 
     private void setMainPane(AnchorPane anchorPane) {
         mainPane.getChildren().setAll(anchorPane);
