@@ -27,7 +27,7 @@ public class NoteWithMarkController extends NoteController{
         DictionaryManagement.removeWord(wordNote.getId(),
                 wordNote.getExpression(), Search.getInstance());
         if (DictionaryManagement.checkInDict(wordNote.getExpression(),
-                Bookmark.getInstance())) {
+                Search.getInstance())) {
             MainMenuController.searchController.showWordLayout(wordNote.getExpression());
         } else {
             MainMenuController.searchController.reset();
